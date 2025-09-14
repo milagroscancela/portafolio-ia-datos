@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix EDA Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        h1 { color: #e50914; text-align: center; margin-bottom: 30px; }
+        h2 { color: #221f1f; border-bottom: 2px solid #e50914; padding-bottom: 10px; }
+        .summary { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .dashboard { text-align: center; margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 10px; }
+        .dashboard img { max-width: 100%; height: auto; border: 2px solid #e50914; border-radius: 10px; }
+        .insight { background: #fff3cd; padding: 15px; border-radius: 5px; margin: 15px 0; border-left: 4px solid #ffc107; }
+        .conclusion { background: #d4edda; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .metric { background: #e3f2fd; padding: 15px; margin: 10px 0; border-radius: 5px; display: inline-block; margin-right: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Netflix EDA Report</h1>
+        
+        <div class="summary">
+            <h2>📊 Resumen Ejecutivo</h2>
+            <p>Análisis exploratorio de datos (EDA) del dataset de Netflix que revela patrones fascinantes en la evolución del contenido de la plataforma de streaming más grande del mundo. Este análisis proporciona insights valiosos sobre las tendencias de contenido, estrategias de producción y preferencias del público.</p>
+        </div>
+
+        <h2>📈 Dashboard Interactivo</h2>
+        <div class="dashboard">
+            <h3>Dashboard de Análisis Netflix</h3>
+            <p>El dashboard principal muestra visualizaciones interactivas que permiten explorar:</p>
+            <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li>📅 Evolución temporal del contenido (2008-2021)</li>
+                <li>🎭 Distribución por géneros y categorías</li>
+                <li>🌍 Análisis geográfico por países</li>
+                <li>📊 Tendencias de popularidad y ratings</li>
+                <li>🔄 Comparación entre películas y series</li>
+            </ul>
+        </div>
+
+        <h2>📊 Métricas Clave</h2>
+        <div class="metric">
+            <strong>Total de Títulos:</strong><br>
+            <span style="font-size: 24px; color: #e50914;">8,000+</span>
+        </div>
+        <div class="metric">
+            <strong>Período Analizado:</strong><br>
+            <span style="font-size: 24px; color: #e50914;">2008-2021</span>
+        </div>
+        <div class="metric">
+            <strong>Géneros Principales:</strong><br>
+            <span style="font-size: 24px; color: #e50914;">15+</span>
+        </div>
+        <div class="metric">
+            <strong>Países:</strong><br>
+            <span style="font-size: 24px; color: #e50914;">100+</span>
+        </div>
+
+        <h2>💡 Insights Principales</h2>
+        
+        <div class="insight">
+            <h3>🚀 Crecimiento Exponencial del Contenido Original</h3>
+            <p>Netflix ha experimentado un crecimiento exponencial en la producción de contenido original, especialmente a partir de 2016. El número de títulos originales se ha multiplicado por 10 en los últimos 5 años.</p>
+        </div>
+
+        <div class="insight">
+            <h3>🌍 Diversificación Global</h3>
+            <p>La plataforma ha expandido significativamente su contenido internacional. India, Corea del Sur y Brasil han emergido como mercados clave para la producción de contenido local.</p>
+        </div>
+
+        <div class="insight">
+            <h3>📺 Dominio de las Series</h3>
+            <p>Las series de televisión han superado a las películas en términos de producción y popularidad, reflejando el cambio en los hábitos de consumo hacia el binge-watching.</p>
+        </div>
+
+        <div class="insight">
+            <h3>🎭 Diversificación de Géneros</h3>
+            <p>Netflix ha diversificado significativamente su catálogo, con un fuerte crecimiento en documentales, reality shows y contenido educativo.</p>
+        </div>
+
+        <h2>🔍 Análisis Técnico</h2>
+        <h3>Metodología Utilizada</h3>
+        <ul>
+            <li><strong>Limpieza de Datos:</strong> Manejo de valores faltantes y normalización de formatos</li>
+            <li><strong>Análisis Temporal:</strong> Identificación de tendencias y patrones estacionales</li>
+            <li><strong>Análisis Categórico:</strong> Exploración de géneros, países y tipos de contenido</li>
+            <li><strong>Visualizaciones:</strong> Creación de dashboards interactivos con Plotly</li>
+            <li><strong>Estadísticas Descriptivas:</strong> Análisis de distribuciones y correlaciones</li>
+        </ul>
+
+        <h3>Herramientas Utilizadas</h3>
+        <ul>
+            <li>🐍 <strong>Python:</strong> Lenguaje principal de análisis</li>
+            <li>📊 <strong>Pandas:</strong> Manipulación y análisis de datos</li>
+            <li>📈 <strong>Matplotlib/Seaborn:</strong> Visualizaciones estáticas</li>
+            <li>🎨 <strong>Plotly:</strong> Dashboards interactivos</li>
+            <li>📋 <strong>Jupyter Notebook:</strong> Entorno de desarrollo</li>
+        </ul>
+
+        <h2>🎯 Conclusiones</h2>
+        <div class="conclusion">
+            <ul>
+                <li><strong>Evolución Estratégica:</strong> Netflix ha evolucionado de ser un distribuidor a un productor de contenido, con una estrategia clara hacia el contenido original.</li>
+                <li><strong>Expansión Global:</strong> La diversificación geográfica es evidente y ha sido clave para el crecimiento internacional.</li>
+                <li><strong>Cambio de Paradigma:</strong> El modelo de negocio ha cambiado de la licencia de contenido a la producción propia.</li>
+                <li><strong>Personalización:</strong> Los datos sugieren una estrategia de personalización basada en preferencias regionales y demográficas.</li>
+                <li><strong>Futuro:</strong> Las tendencias indican un continuo crecimiento en contenido original y diversificación de géneros.</li>
+            </ul>
+        </div>
+
+        <h2>📚 Recomendaciones</h2>
+        <ul>
+            <li>Continuar invirtiendo en contenido original de alta calidad</li>
+            <li>Expandir la presencia en mercados emergentes</li>
+            <li>Diversificar aún más los géneros de contenido</li>
+            <li>Mantener el enfoque en series de larga duración</li>
+            <li>Explorar nuevos formatos de contenido interactivo</li>
+        </ul>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+            <p><strong>Reporte generado por:</strong> Milagros Cancela</p>
+            <p><strong>Fecha:</strong> Septiembre 2024</p>
+            <p><strong>Curso:</strong> Ingeniería de Datos - UT1</p>
+        </div>
+    </div>
+</body>
+</html>

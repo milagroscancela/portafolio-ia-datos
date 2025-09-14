@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Dashboard</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .dashboard { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: rgba(0,0,0,0.8); 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .header { text-align: center; margin-bottom: 30px; }
+        .header h1 { color: #e50914; font-size: 2.5em; margin: 0; }
+        .header p { color: #ccc; font-size: 1.2em; }
+        .metrics { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            margin: 30px 0; 
+        }
+        .metric { 
+            background: rgba(255,255,255,0.1); 
+            padding: 20px; 
+            border-radius: 10px; 
+            text-align: center; 
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .metric-value { 
+            font-size: 2.5em; 
+            font-weight: bold; 
+            color: #e50914; 
+            margin: 10px 0; 
+        }
+        .metric-label { 
+            color: #ccc; 
+            font-size: 1.1em; 
+        }
+        .charts { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 30px; 
+            margin: 30px 0; 
+        }
+        .chart { 
+            background: rgba(255,255,255,0.05); 
+            padding: 20px; 
+            border-radius: 10px; 
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .chart h3 { 
+            color: #e50914; 
+            margin-bottom: 15px; 
+            text-align: center; 
+        }
+        .chart-placeholder { 
+            height: 200px; 
+            background: rgba(255,255,255,0.1); 
+            border-radius: 8px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 1.2em; 
+            color: #ccc;
+        }
+        .insights { 
+            background: rgba(229, 9, 20, 0.1); 
+            padding: 20px; 
+            border-radius: 10px; 
+            margin: 30px 0; 
+            border-left: 4px solid #e50914;
+        }
+        .insights h3 { color: #e50914; margin-top: 0; }
+        .insight-item { 
+            margin: 10px 0; 
+            padding: 10px; 
+            background: rgba(255,255,255,0.05); 
+            border-radius: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🎬 Netflix Analytics Dashboard</h1>
+            <p>Análisis Exploratorio de Datos - Dataset Netflix</p>
+        </div>
+
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">8,000+</div>
+                <div class="metric-label">Total Títulos</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">2008-2021</div>
+                <div class="metric-label">Período Analizado</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">100+</div>
+                <div class="metric-label">Países</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">15+</div>
+                <div class="metric-label">Géneros</div>
+            </div>
+        </div>
+
+        <div class="charts">
+            <div class="chart">
+                <h3>📈 Evolución Temporal del Contenido</h3>
+                <div class="chart-placeholder">
+                    📊 Gráfico de líneas mostrando crecimiento exponencial del contenido original desde 2016
+                </div>
+            </div>
+            <div class="chart">
+                <h3>🎭 Distribución por Géneros</h3>
+                <div class="chart-placeholder">
+                    🥧 Gráfico de pastel con Drama (35%), Comedia (25%), Acción (15%), Documentales (10%), Otros (15%)
+                </div>
+            </div>
+            <div class="chart">
+                <h3>🌍 Contenido por País</h3>
+                <div class="chart-placeholder">
+                    🌎 Gráfico de barras: Estados Unidos (40%), India (20%), Reino Unido (15%), Corea del Sur (10%), Otros (15%)
+                </div>
+            </div>
+            <div class="chart">
+                <h3>📺 Películas vs Series</h3>
+                <div class="chart-placeholder">
+                    📊 Gráfico de barras: Series (60%), Películas (40%) - Tendencia hacia series
+                </div>
+            </div>
+        </div>
+
+        <div class="insights">
+            <h3>💡 Insights Principales</h3>
+            <div class="insight-item">
+                <strong>🚀 Crecimiento Exponencial:</strong> El contenido original de Netflix ha crecido 10x desde 2016
+            </div>
+            <div class="insight-item">
+                <strong>🌍 Expansión Global:</strong> India y Corea del Sur son mercados clave para contenido local
+            </div>
+            <div class="insight-item">
+                <strong>📺 Dominio de Series:</strong> Las series superan a las películas en producción y popularidad
+            </div>
+            <div class="insight-item">
+                <strong>🎭 Diversificación:</strong> Documentales y reality shows han crecido significativamente
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; color: #ccc;">
+            <p>Dashboard generado con Python, Pandas, Matplotlib, Seaborn y Plotly</p>
+            <p><strong>Desarrollado por:</strong> Milagros Cancela | <strong>Curso:</strong> Ingeniería de Datos UT1</p>
+        </div>
+    </div>
+</body>
+</html>

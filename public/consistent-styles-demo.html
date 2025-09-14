@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo de Estilos Consistentes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fdf2f8 0%, #faf5ff 100%);
+            min-height: 100vh;
+        }
+        
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #ec4899;
+            margin-bottom: 30px;
+        }
+        
+        .demo-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Consistent selection styles */
+        .selected-pink {
+            background: linear-gradient(135deg, #fce7f3, #fbcfe8) !important;
+            color: #831843 !important;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+            transform: scale(1.05) !important;
+            border: 2px solid #f472b6 !important;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .selected-pink::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: pulse 2s infinite;
+            pointer-events: none;
+        }
+        
+        .selected-pink .relative {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hover-pink {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .hover-pink:hover {
+            background: #fdf2f8 !important;
+            border-color: #fbcfe8 !important;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+            transform: scale(1.02) !important;
+        }
+        
+        .tab-button {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tab-button.selected {
+            background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+            color: #831843;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: scale(1.02);
+            border: 2px solid #f472b6;
+        }
+        
+        .tab-button:not(.selected) {
+            background: #f3f4f6;
+            color: #374151;
+        }
+        
+        .tab-button:not(.selected):hover {
+            background: #fdf2f8;
+            border-color: #fbcfe8;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transform: scale(1.01);
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 0.4;
+            }
+        }
+        
+        .grid {
+            display: grid;
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        .grid-cols-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .grid-cols-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .flex {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .unit-card {
+            padding: 24px;
+            border-radius: 12px;
+            text-align: left;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .unit-id {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        
+        .unit-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .unit-description {
+            font-size: 12px;
+            opacity: 0.75;
+        }
+        
+        .instructions {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🎨 Demo de Estilos Consistentes</h1>
+        
+        <div class="demo-section">
+            <h2>✨ Nuevo Sistema de Selección Unificado</h2>
+            <div class="instructions">
+                <p>🎯 <strong>Estilo Consistente</strong> en todas las secciones del portafolio</p>
+                <p>💫 <strong>Color Rosa Pastel</strong> para elementos seleccionados</p>
+                <p>🌟 <strong>Efectos de Brillo</strong> y animaciones suaves</p>
+                <p>📱 <strong>Hover Uniforme</strong> en todos los elementos interactivos</p>
+                <p>🎨 <strong>Paleta Coherente</strong> en todo el sitio</p>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>📋 Tabs de Navegación</h2>
+            <p>Secciones: About, Course, Notes, Documentation, Previous Knowledge</p>
+            <div class="flex">
+                <button class="tab-button selected" onclick="selectTab(this)">Biografía</button>
+                <button class="tab-button" onclick="selectTab(this)">Formación</button>
+                <button class="tab-button" onclick="selectTab(this)">Logros</button>
+                <button class="tab-button" onclick="selectTab(this)">Contacto</button>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🎓 Categorías de Contenido</h2>
+            <p>Apuntes, Documentación, Conocimientos Previos</p>
+            <div class="flex">
+                <button class="tab-button selected" onclick="selectTab(this)">📊 Diapositivas</button>
+                <button class="tab-button" onclick="selectTab(this)">📝 Apuntes</button>
+                <button class="tab-button" onclick="selectTab(this)">📚 Lecturas</button>
+                <button class="tab-button" onclick="selectTab(this)">🔗 Recursos</button>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>💼 Unidades del Portafolio</h2>
+            <p>Selección de unidades con estilo rosa pastel</p>
+            <div class="grid grid-cols-4">
+                <div class="unit-card selected-pink" onclick="selectUnit(this, 'UT1')">
+                    <div class="relative">
+                        <div class="unit-id">UT1</div>
+                        <div class="unit-title">Fundamentos</div>
+                        <div class="unit-description">Conceptos básicos</div>
+                    </div>
+                </div>
+                <div class="unit-card hover-pink bg-gray-100 text-gray-700" onclick="selectUnit(this, 'UT2')">
+                    <div class="unit-id">UT2</div>
+                    <div class="unit-title">Procesamiento</div>
+                    <div class="unit-description">ETL/ELT pipelines</div>
+                </div>
+                <div class="unit-card hover-pink bg-gray-100 text-gray-700" onclick="selectUnit(this, 'UT3')">
+                    <div class="unit-id">UT3</div>
+                    <div class="unit-title">Almacenamiento</div>
+                    <div class="unit-description">Data warehouses</div>
+                </div>
+                <div class="unit-card hover-pink bg-gray-100 text-gray-700" onclick="selectUnit(this, 'UT4')">
+                    <div class="unit-id">UT4</div>
+                    <div class="unit-title">Visualización</div>
+                    <div class="unit-description">Dashboards y ML</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🎯 Materias de Conocimientos Previos</h2>
+            <p>Probabilidad, Estadística, Matemáticas, Programación</p>
+            <div class="flex">
+                <button class="tab-button selected" onclick="selectTab(this)">🎲 Probabilidad</button>
+                <button class="tab-button" onclick="selectTab(this)">📊 Estadística</button>
+                <button class="tab-button" onclick="selectTab(this)">🔢 Matemáticas</button>
+                <button class="tab-button" onclick="selectTab(this)">💻 Programación</button>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>📖 Categorías de Documentación</h2>
+            <p>Herramientas, Frameworks, Papers, Tutoriales, Estándares</p>
+            <div class="flex">
+                <button class="tab-button selected" onclick="selectTab(this)">🛠️ Herramientas</button>
+                <button class="tab-button" onclick="selectTab(this)">⚙️ Frameworks</button>
+                <button class="tab-button" onclick="selectTab(this)">📄 Papers</button>
+                <button class="tab-button" onclick="selectTab(this)">🎓 Tutoriales</button>
+                <button class="tab-button" onclick="selectTab(this)">📋 Estándares</button>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>✨ Características del Nuevo Sistema</h2>
+            <div class="instructions">
+                <p><strong>🎨 Paleta de Colores Consistente:</strong></p>
+                <ul>
+                    <li>Rosa Pastel: <code>#fce7f3</code> a <code>#fbcfe8</code></li>
+                    <li>Texto Oscuro: <code>#831843</code> para mejor legibilidad</li>
+                    <li>Bordes Elegantes: <code>#f472b6</code> con anillo de resplandor</li>
+                </ul>
+                
+                <p><strong>💫 Efectos Visuales:</strong></p>
+                <ul>
+                    <li>Escala Aumentada: 1.05x para elementos seleccionados</li>
+                    <li>Animación de Brillo: Efecto de pulso sutil</li>
+                    <li>Transiciones Suaves: 0.3s para todos los cambios</li>
+                    <li>Sombras Profundas: Para efecto de elevación</li>
+                </ul>
+                
+                <p><strong>📱 Responsive y Accesible:</strong></p>
+                <ul>
+                    <li>Funciona en todos los dispositivos</li>
+                    <li>Mantiene la funcionalidad de teclado</li>
+                    <li>Colores con buen contraste</li>
+                    <li>Animaciones optimizadas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function selectTab(element) {
+            // Remove selected class from all tabs in the same group
+            const group = element.parentElement;
+            group.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked tab
+            element.classList.add('selected');
+        }
+        
+        function selectUnit(element, unitId) {
+            // Remove selected class from all units
+            document.querySelectorAll('.unit-card').forEach(card => {
+                card.classList.remove('selected-pink');
+                card.classList.add('hover-pink', 'bg-gray-100', 'text-gray-700');
+            });
+            
+            // Add selected class to clicked unit
+            element.classList.remove('hover-pink', 'bg-gray-100', 'text-gray-700');
+            element.classList.add('selected-pink');
+            
+            console.log(`Unidad seleccionada: ${unitId}`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo del Cursor Personalizado</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #fdf2f8 0%, #faf5ff 100%);
+            min-height: 100vh;
+        }
+        
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #ec4899;
+            margin-bottom: 30px;
+        }
+        
+        .demo-section {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #ec4899, #a855f7);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .link {
+            color: #ec4899;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px;
+            display: inline-block;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🎯 Demo del Cursor Personalizado</h1>
+        
+        <div class="demo-section">
+            <h2>Características del Cursor</h2>
+            <p>✨ <strong>Color Rosa</strong> con bordes blancos</p>
+            <p>💫 <strong>Efecto de Hover</strong> al pasar sobre elementos interactivos</p>
+            <p>🌟 <strong>Brillos Fucsia</strong> al hacer clic en cualquier elemento</p>
+            <p>📱 <strong>Responsive</strong> - Solo se activa en dispositivos de escritorio</p>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Prueba los Efectos</h2>
+            <p>Haz clic en cualquier botón o enlace para ver el efecto de brillo fucsia:</p>
+            
+            <button class="btn">Botón de Prueba 1</button>
+            <button class="btn">Botón de Prueba 2</button>
+            <br>
+            <a href="#" class="link">Enlace de Prueba 1</a>
+            <a href="#" class="link">Enlace de Prueba 2</a>
+        </div>
+        
+        <div class="demo-section">
+            <h2>Instrucciones</h2>
+            <p>1. Mueve el cursor por la página para ver el efecto rosa</p>
+            <p>2. Pasa el cursor sobre los botones y enlaces para ver el efecto de hover</p>
+            <p>3. Haz clic en cualquier elemento para ver el brillo fucsia</p>
+            <p>4. El efecto solo funciona en dispositivos de escritorio</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,3 +1,410 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+/* Custom styles for portfolio */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom cursor with fuchsia glow effect */
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none;
+  }
+
+  body {
+    cursor: none;
+  }
+
+  .cursor-glow {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: #ec4899;
+    border: 2px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.6), 0 0 30px rgba(236, 72, 153, 0.3);
+  }
+
+  .cursor-glow.hover {
+    transform: scale(1.5);
+    background: #db2777;
+    box-shadow: 0 0 20px rgba(219, 39, 119, 0.8), 0 0 40px rgba(219, 39, 119, 0.4);
+  }
+
+  .cursor-glow::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 30px;
+    height: 30px;
+    background: rgba(236, 72, 153, 0.2);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  .cursor-glow::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background: rgba(236, 72, 153, 0.1);
+    border-radius: 50%;
+    animation: pulse 3s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Restore cursor for interactive elements */
+  a, button, input, textarea, select, [role="button"], [tabindex] {
+    cursor: pointer !important;
+  }
+
+  a:hover, button:hover, [role="button"]:hover {
+    cursor: pointer !important;
+  }
+
+  /* Click effect with fuchsia glow */
+  .click-effect {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.9) 0%, rgba(255, 0, 255, 0.6) 30%, rgba(255, 0, 255, 0.3) 60%, transparent 80%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    animation: clickGlow 0.8s ease-out;
+  }
+
+  .click-effect::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: clickGlowOuter 0.8s ease-out;
+  }
+
+  .click-effect::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: clickGlowOuter 0.8s ease-out 0.1s;
+  }
+
+  @keyframes clickGlow {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    30% {
+      transform: scale(1.2);
+      opacity: 0.9;
+    }
+    70% {
+      transform: scale(2);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+
+  @keyframes clickGlowOuter {
+    0% {
+      transform: scale(0);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+}
+
+/* Mobile devices - keep default cursor */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #ec4899, #a855f7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #db2777, #9333ea);
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #fdf2f8 0%, #faf5ff 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-border {
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  padding: 2px;
+  border-radius: 8px;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #ec4899, #a855f7);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(236, 72, 153, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #ec4899;
+  padding: 12px 24px;
+  border: 2px solid #ec4899;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #ec4899;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Portfolio unit hover effect */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
+
+/* Consistent selection styles for all interactive elements */
+.selected-pink {
+  background: linear-gradient(135deg, #fce7f3, #fbcfe8) !important;
+  color: #831843 !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  transform: scale(1.05) !important;
+  border: 2px solid #f472b6 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.selected-pink::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: pulse 2s infinite;
+  pointer-events: none;
+}
+
+.selected-pink .relative {
+  position: relative;
+  z-index: 10;
+}
+
+/* Hover styles for non-selected elements */
+.hover-pink {
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.hover-pink:hover {
+  background: #fdf2f8 !important;
+  border-color: #fbcfe8 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  transform: scale(1.02) !important;
+}
+
+/* Tab and button base styles */
+.tab-button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-button.selected {
+  background: linear-gradient(135deg, #fce7f3, #fbcfe8);
+  color: #831843;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: scale(1.02);
+  border: 2px solid #f472b6;
+}
+
+.tab-button:not(.selected) {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.tab-button:not(.selected):hover {
+  background: #fdf2f8;
+  border-color: #fbcfe8;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: scale(1.01);
+}
+
+/* Enhanced Animations */
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.6), 0 0 40px rgba(236, 72, 153, 0.3);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.8s ease-out;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

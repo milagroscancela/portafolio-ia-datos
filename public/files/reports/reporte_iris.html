@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte - Análisis del Dataset Iris</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
+        h2 { color: #34495e; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .summary { background: #ecf0f1; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .visualization { text-align: center; margin: 20px 0; }
+        .visualization img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 5px; }
+        .conclusion { background: #e8f5e8; padding: 20px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Reporte de Análisis - Dataset Iris</h1>
+        
+        <div class="summary">
+            <h2>📋 Resumen Ejecutivo</h2>
+            <p>Este reporte presenta un análisis exploratorio completo del dataset Iris, uno de los datasets más utilizados en machine learning. El análisis incluye estadísticas descriptivas, visualizaciones y conclusiones sobre las características de las tres especies de iris.</p>
+        </div>
+
+        <h2>🔍 Análisis Descriptivo</h2>
+        <ul>
+            <li><strong>Total de muestras:</strong> 150</li>
+            <li><strong>Número de características:</strong> 4 (sepal length, sepal width, petal length, petal width)</li>
+            <li><strong>Número de especies:</strong> 3 (setosa, versicolor, virginica)</li>
+            <li><strong>Datos faltantes:</strong> 0</li>
+        </ul>
+
+        <h2>📈 Visualizaciones Principales</h2>
+        
+        <div class="visualization">
+            <h3>Distribución por Especie</h3>
+            <p>Las visualizaciones muestran claras diferencias entre las especies, especialmente en las dimensiones del pétalo.</p>
+        </div>
+
+        <div class="visualization">
+            <h3>Matriz de Correlaciones</h3>
+            <p>Se observan correlaciones fuertes entre las variables, especialmente entre petal length y petal width.</p>
+        </div>
+
+        <h2>🎯 Conclusiones</h2>
+        <div class="conclusion">
+            <ul>
+                <li>Las especies de iris son claramente separables basándose en las características morfológicas</li>
+                <li>Iris setosa es la más distinta de las tres especies</li>
+                <li>Las dimensiones del pétalo son más discriminantes que las del sépalo</li>
+                <li>El dataset es ideal para algoritmos de clasificación supervisada</li>
+            </ul>
+        </div>
+
+        <h2>📚 Metodología</h2>
+        <p>El análisis se realizó utilizando Python con las librerías pandas, matplotlib, seaborn y scikit-learn. Se aplicaron técnicas de análisis exploratorio de datos (EDA) estándar incluyendo estadísticas descriptivas, visualizaciones y análisis de correlaciones.</p>
+    </div>
+</body>
+</html>
