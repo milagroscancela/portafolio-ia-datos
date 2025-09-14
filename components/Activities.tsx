@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 const Activities = () => {
   const [activeTab, setActiveTab] = useState('individual');
-  const [selectedActivity, setSelectedActivity] = useState(null);
+  const [selectedActivity, setSelectedActivity] = useState<any>(null);
   const [showNotebook, setShowNotebook] = useState(false);
   const [showVisualizations, setShowVisualizations] = useState(false);
   const [showReport, setShowReport] = useState(false);
@@ -476,7 +476,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {selectedActivity.visualizations.map((viz, index) => (
+                {selectedActivity.visualizations.map((viz: string, index: number) => (
                   <div key={index} className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                       Visualización {index + 1}
