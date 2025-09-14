@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const Portfolio = () => {
   const [activeUnit, setActiveUnit] = useState('UT1');
@@ -420,12 +420,13 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                                       src={`/activities/visualizations/${viz}`}
                                       alt={`Visualización ${index + 1}`}
                                       className="w-full h-20 object-cover rounded-lg border border-gray-200 dark:border-gray-600"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
-                              const nextSibling = target.nextSibling as HTMLElement;
-                              if (nextSibling) nextSibling.style.display = 'flex';
-                            }}
+                                      onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                                        const img = e.currentTarget as HTMLImageElement;
+                                        img.style.display = 'none';
+                                        
+                                        const fallback = img.nextElementSibling as HTMLElement | null;
+                                        if (fallback) fallback.style.display = 'flex';
+                                      }}
                                     />
                                     <div 
                                       className="absolute inset-0 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-400 text-xs"
