@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const Activities = () => {
   const [activeTab, setActiveTab] = useState('individual');
@@ -245,9 +245,12 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                             src={`/activities/visualizations/${viz}`}
                             alt={`Visualización ${index + 1}`}
                             className="w-full h-20 object-cover rounded-lg border border-gray-200 dark:border-gray-600"
-                            onError={(e) => {
-                              e.target.style.display = 'none';
-                              e.target.nextSibling.style.display = 'flex';
+                            onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+                              const img = e.currentTarget as HTMLImageElement;
+                              img.style.display = 'none';
+                              
+                              const fallback = img.nextElementSibling as HTMLElement | null;
+                              if (fallback) fallback.style.display = 'flex';
                             }}
                           />
                           <div 
