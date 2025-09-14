@@ -138,7 +138,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
     return individualActivities.find(a => a.id === activityId) ? 'individual' : 'group';
   };
 
-  const openReflection = (activity: typeof individualActivities[0]) => {
+  const openReflection = (activity: any) => {
     setSelectedActivity(activity);
   };
 
@@ -146,7 +146,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
     setSelectedActivity(null);
   };
 
-  const openNotebook = (activity: typeof individualActivities[0]) => {
+  const openNotebook = (activity: any) => {
     setSelectedActivity(activity);
     setShowNotebook(true);
   };
@@ -156,7 +156,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
     setSelectedActivity(null);
   };
 
-  const openVisualizations = (activity: typeof individualActivities[0]) => {
+  const openVisualizations = (activity: any) => {
     setSelectedActivity(activity);
     setShowVisualizations(true);
   };
@@ -166,7 +166,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
     setSelectedActivity(null);
   };
 
-  const openReport = (activity: typeof individualActivities[0]) => {
+  const openReport = (activity: any) => {
     setSelectedActivity(activity);
     setShowReport(true);
   };
