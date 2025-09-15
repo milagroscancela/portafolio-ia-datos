@@ -20,7 +20,7 @@ const Course = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              <span className="gradient-text">Curso</span> de Ingeniería de Datos
+              <span className="text-black dark:text-white">Curso</span> de Ingeniería de Datos
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explorando las mejores prácticas y tecnologías en el campo de la ingeniería de datos

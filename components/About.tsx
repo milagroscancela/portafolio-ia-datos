@@ -47,8 +47,8 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Sobre <span className="gradient-text">mí</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-4">
+              Sobre <span className="text-black dark:text-white">mí</span>
             </h2>
             <p className="text-xl text-gray-800 dark:text-white max-w-2xl mx-auto">
               Estudiante de ingeniería en IA y Ciencia de Datos apasionada por la transformación de datos en insights valiosos

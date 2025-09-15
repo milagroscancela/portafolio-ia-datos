@@ -21,7 +21,7 @@ const Header = () => {
     { name: 'Sobre mí', href: '#about' },
     { name: 'Habilidades', href: '#skills' },
     { name: 'Conocimientos', href: '#previous-knowledge' },
-    { name: 'Curso', href: '#course' },
+    { name: 'Curso', href: '#course' }, 
     { name: 'Apuntes', href: '#notes' },
     { name: 'Portafolio', href: '#portfolio' },
     { name: 'Actividades', href: '#activities' },
@@ -38,7 +38,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold gradient-text">
+          <Link href="/" className="text-2xl font-bold text-white dark:text-white">
             Portafolio de Milagros Cancela
           </Link>
 

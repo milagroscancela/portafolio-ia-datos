@@ -316,7 +316,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              <span className="gradient-text">Portafolio</span> de Trabajos
+              <span className="text-black dark:text-white">Portafolio</span> de Trabajos
             </h2>
             <p className="text-xl text-gray-800 dark:text-white max-w-3xl mx-auto">
               Organización por unidades de todos los ejercicios, proyectos y reflexiones del curso

@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold gradient-text mb-4">Portafolio IA</h3>
+            <h3 className="text-2xl font-bold text-white dark:text-white mb-4">Portafolio IA</h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Portafolio personal de Ingeniería de Datos. Explorando el mundo de los datos 
               y compartiendo conocimientos a través de proyectos prácticos.
