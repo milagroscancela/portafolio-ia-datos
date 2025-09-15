@@ -10,34 +10,34 @@ import Notes from '../../components/Notes';
 import Activities from '../../components/Activities';
 import Portfolio from '../../components/Portfolio';
 import Footer from '../../components/Footer';
-// import CustomCursor from '../../components/CustomCursor';
+import CustomCursor from '../../components/CustomCursor';
 
 export default function HomePage() {
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
-  // useEffect(() => {
-  //   // Simulate loading time for smooth animations
-  //   const timer = setTimeout(() => {
-  //     setIsLoading(false);
-  //   }, 1000);
+  useEffect(() => {
+    // Simulate loading time for smooth animations
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
-  //   return () => clearTimeout(timer);
-  // }, []);
+    return () => clearTimeout(timer);
+  }, []);
 
-  // if (isLoading) {
-  //   return (
-  //     <div className="min-h-screen gradient-bg flex items-center justify-center">
-  //       <div className="text-center">
-  //         <div className="w-16 h-16 border-4 border-primary-200 border-t-primary-500 rounded-full animate-spin mx-auto mb-4"></div>
-  //         <h2 className="text-2xl font-bold gradient-text">Cargando Portafolio...</h2>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (isLoading) {
+    return (
+      <div className="min-h-screen gradient-bg flex items-center justify-center">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-primary-200 border-t-primary-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <h2 className="text-2xl font-bold gradient-text">Cargando Portafolio...</h2>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen">
-      {/* <CustomCursor /> */}
+      <CustomCursor />
       <Header />
       
       {/* Hero Section */}

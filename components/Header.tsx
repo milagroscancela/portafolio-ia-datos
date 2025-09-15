@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-// import ThemeToggle from './ThemeToggle';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,7 +53,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            {/* <ThemeToggle /> */}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,7 +92,7 @@ const Header = () => {
                 </Link>
               ))}
               <div className="pt-2">
-                {/* <ThemeToggle /> */}
+                <ThemeToggle />
               </div>
             </div>
           </div>
