@@ -139,22 +139,22 @@ const Course = () => {
                 </h3>
                 
                 <div className="text-center">
-                  <div className="bg-white rounded-xl p-8 shadow-md">
-                    <h4 className="text-xl font-bold text-gray-900 mb-4">Syllabus Oficial 2025</h4>
-                    <p className="text-gray-600 mb-6">
+                  <div className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-700 dark:to-gray-600 rounded-xl p-8 shadow-md">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Syllabus Oficial 2025</h4>
+                    <p className="text-gray-600 dark:text-gray-300 mb-6">
                       Descarga el programa completo del curso con todos los detalles, cronograma y evaluaciones.
                     </p>
                     <a
                       href="/syl/Syllabus 2025.pdf"
                       download="Syllabus_Ingenieria_Datos_2025.pdf"
-                      className="inline-flex items-center px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-colors duration-200"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold rounded-lg hover:from-primary-600 hover:to-secondary-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
                     >
                       <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                       Descargar Syllabus PDF
                     </a>
-                    </div>
+                  </div>
                 </div>
               </div>
             )}
