@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Header from '../../components/Header';
 import About from '../../components/About';
+import Skills from '../../components/Skills';
 import PreviousKnowledge from '../../components/PreviousKnowledge';
 import Course from '../../components/Course';
 import Notes from '../../components/Notes';
@@ -68,6 +69,7 @@ export default function HomePage() {
       </section>
 
       <About />
+      <Skills />
       <PreviousKnowledge />
       <Course />
       <Notes />
