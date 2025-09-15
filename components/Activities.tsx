@@ -185,7 +185,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               <span className="gradient-text">Actividades</span> UT1
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 dark:text-white max-w-3xl mx-auto">
               Trabajos prácticos realizados durante la primera unidad del curso
             </p>
           </div>
@@ -223,7 +223,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {activity.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-3">
+                  <p className="text-gray-800 dark:text-white mb-3">
                     {activity.description}
                   </p>
                   <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
@@ -237,7 +237,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                 {/* Visualizations */}
                 {activity.visualizations.length > 0 && (
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Visualizaciones:</h4>
+                    <h4 className="text-sm font-semibold text-gray-800 dark:text-white mb-2">Visualizaciones:</h4>
                     <div className="grid grid-cols-2 gap-2">
                       {activity.visualizations.map((viz, index) => (
                         <div key={index} className="relative group">

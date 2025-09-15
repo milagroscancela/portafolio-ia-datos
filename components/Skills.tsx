@@ -23,7 +23,7 @@ const Skills = () => {
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Habilidades
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <p className="text-xl text-gray-800 dark:text-white">
               Tecnologías y herramientas que utilizo en mis proyectos
             </p>
           </div>

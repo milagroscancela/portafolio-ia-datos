@@ -50,7 +50,7 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Sobre <span className="gradient-text">mí</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-800 dark:text-white max-w-2xl mx-auto">
               Estudiante de ingeniería en IA y Ciencia de Datos apasionada por la transformación de datos en insights valiosos
             </p>
           </div>
@@ -113,7 +113,7 @@ const About = () => {
                     <div className="border-l-4 border-primary-500 pl-4">
                       <h4 className="font-bold text-gray-900">Ingeniería en Inteligencia Artificial y Ciencia de Datos</h4>
                       <p className="text-gray-600">Universidad Católica del Uruguay - 03/2024 ~ Actualidad</p>
-                      <p className="text-sm text-gray-500">Especialización en IA</p>
+                      <p className="text-sm text-gray-700 dark:text-white">Especialización en IA</p>
                     </div>
                     <div className="border-l-4 border-secondary-500 pl-4">
                       <h4 className="font-bold text-gray-900">Certificación en Ciberseguridad de Google </h4>

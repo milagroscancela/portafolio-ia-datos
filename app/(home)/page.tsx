@@ -47,7 +47,7 @@ export default function HomePage() {
             <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6 animate-fade-in">
               <span className="text-black dark:text-white">Portafolio de Milagros Cancela</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-slide-up">
+            <p className="text-xl md:text-2xl text-gray-800 dark:text-gray-300 mb-8 animate-slide-up">
               Explorando el mundo de los datos, transformando información en insights valiosos
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
