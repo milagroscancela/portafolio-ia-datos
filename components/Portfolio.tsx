@@ -348,14 +348,14 @@ Esta experiencia me preparó para trabajar con datasets reales y complejos, desa
                             <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
                               <span className="mr-4">📅 {activity.date}</span>
                               <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-xs">
-                                {activity.notebook}
+                                Notebook disponible
                               </span>
                             </div>
                           </div>
 
 
                           {/* Actions */}
-                          <div className="grid grid-cols-2 gap-2">
+                          <div className="flex flex-wrap gap-2">
                             {/* Reflexión - Solo para Netflix individual */}
                             {activity.id === 'act_tres_netflix' && activity.reflection && (
                               <button
@@ -551,12 +551,6 @@ Esta experiencia me preparó para trabajar con datasets reales y complejos, desa
                       {currentUnit.exercises.filter(e => e.status === 'Completado').length}
                     </div>
                     <div className="text-sm text-gray-600">Completados</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-4">
-                    <div className="text-2xl font-bold text-accent-600">
-                      {currentUnit.exercises.filter(e => e.visualization).length}
-                    </div>
-                    <div className="text-sm text-gray-600">Visualizaciones</div>
                   </div>
                 </div>
               </div>
