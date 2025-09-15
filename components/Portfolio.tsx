@@ -18,14 +18,9 @@ const Portfolio = () => {
       title: 'Actividad 2 - Análisis del Dataset Iris',
       description: 'Análisis completo del dataset clásico de Iris con visualizaciones avanzadas',
       date: '2024-09-07',
-      notebook: 'dataset_iris.ipynb',
-      visualizations: [
-        'histogramas_kde_por_especie.png',
-        'matriz_correlaciones.png',
-        'missing.png',
-        'pairplot_por_especie.png'
-      ],
-      report: 'reporte_iris.html',
+      notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_dos_iris/dataset_iris/',
+      visualizations: [],
+      report: '',
       reflection: `Esta actividad individual fue fundamental para entender el flujo completo de un proyecto de análisis de datos.
 
 **Aspectos técnicos:**
@@ -46,9 +41,9 @@ Esta actividad me mostró la complejidad real de los proyectos de datos y la imp
       title: 'Actividad 3 - EDA Netflix',
       description: 'Análisis exploratorio del dataset de Netflix con dashboard interactivo',
       date: '2024-09-10',
-      notebook: 'eda_netflix.ipynb',
-      visualizations: ['dashboard.png'],
-      report: 'netflix_eda_report.html',
+      notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_netflix/eda_netflix/',
+      visualizations: ['https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_netflix/netflix_dashboard.png'],
+      report: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_netflix/netflix_eda_report.html',
       reflection: `El análisis del dataset de Netflix fue una experiencia muy enriquecedora que me conectó con datos del mundo real.
 
 **Desafíos del dataset real:**
@@ -77,61 +72,20 @@ Esta experiencia me preparó para trabajar con datasets reales y complejos, desa
       title: 'Actividad 3 - EDA Netflix Grupal',
       description: 'Análisis exploratorio del dataset de Netflix con trabajo colaborativo',
       date: '2024-09-10',
-      notebook: 'Practica03.ipynb',
-      visualizations: ['dashboard.png'],
-      report: 'netflix_eda_report.html',
-      reflection: `Esta actividad grupal fue una experiencia muy enriquecedora trabajando con datos del mundo real.
-
-**Trabajo en equipo:**
-- Aprendí a coordinar tareas entre múltiples personas
-- Desarrollé habilidades de comunicación técnica
-- Practiqué la revisión de código y documentación
-
-**Desafíos del dataset real:**
-- Manejo de datos faltantes en un dataset grande
-- Limpieza de datos inconsistentes (fechas, categorías)
-- Optimización de visualizaciones para datasets extensos
-
-**Aprendizajes técnicos:**
-- Uso avanzado de pandas para datasets grandes
-- Creación de reportes HTML completos
-- Técnicas de visualización para datos temporales
-
-**Insights descubiertos:**
-- Patrones estacionales en el contenido de Netflix
-- Correlaciones entre géneros y popularidad
-- Tendencias de crecimiento de la plataforma
-
-**Impacto en mi formación:**
-Esta actividad me mostró la importancia del trabajo colaborativo en proyectos de datos complejos.`
+      notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_grupal/Practica03/',
+      visualizations: [],
+      report: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_grupal/netflix_eda_report.html',
+      reflection: ''
     },
     {
       id: 'act_cuatro_grupal',
       title: 'Actividad 4 - EDA Multi-fuentes y Joins',
       description: 'Análisis de múltiples fuentes de datos con operaciones de join',
       date: '2024-09-12',
-      notebook: 'Practica_4_EDA_Multi_fuentes_y_Joins_Fill_in_the_Blanks.ipynb',
+      notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cuatro_grupal/Practica_4_EDA_Multi_fuentes_y_Joins_Fill_in_the_Blanks/',
       visualizations: [],
-      report: 'reporte_multi_fuentes.html',
-      reflection: `Esta actividad grupal fue la más desafiante hasta ahora, trabajando con múltiples fuentes de datos.
-
-**Complejidad del proyecto:**
-- Integración de datos de diferentes fuentes
-- Manejo de relaciones entre tablas
-- Optimización de consultas con joins
-
-**Habilidades desarrolladas:**
-- SQL avanzado para operaciones de join
-- Estrategias de limpieza de datos heterogéneos
-- Documentación de procesos complejos
-
-**Trabajo colaborativo:**
-- División eficiente de tareas complejas
-- Revisión cruzada de código
-- Integración de diferentes enfoques de análisis
-
-**Resultado final:**
-Logramos crear un análisis coherente que integraba múltiples fuentes de datos, demostrando la importancia de la planificación en proyectos de datos complejos.`
+      report: '',
+      reflection: ''
     }
   ];
 
@@ -447,27 +401,34 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
 
                           {/* Actions */}
                           <div className="grid grid-cols-2 gap-2">
-                            <button
-                              onClick={() => openReflection(activity)}
-                              className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
-                            >
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                              </svg>
-                              <span>Reflexión</span>
-                            </button>
+                            {/* Reflexión - Solo para Netflix individual */}
+                            {activity.id === 'act_tres_netflix' && activity.reflection && (
+                              <button
+                                onClick={() => openReflection(activity)}
+                                className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
+                              >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                                </svg>
+                                <span>Reflexión</span>
+                              </button>
+                            )}
 
-                            <button
-                              onClick={() => openNotebook(activity)}
+                            {/* Notebook - Para todas las actividades */}
+                            <a
+                              href={activity.notebook}
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="btn-primary flex items-center justify-center space-x-1 text-sm px-3 py-2"
                             >
                               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                               </svg>
                               <span>Ver Notebook</span>
-                            </button>
+                            </a>
 
-                            {activity.visualizations.length > 0 && (
+                            {/* Visualizaciones - Solo para Netflix individual */}
+                            {activity.id === 'act_tres_netflix' && activity.visualizations.length > 0 && (
                               <button
                                 onClick={() => openVisualizations(activity)}
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
@@ -480,28 +441,20 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                               </button>
                             )}
 
-                            {activity.report && (
-                              <button
-                                onClick={() => openReport(activity)}
+                            {/* Reporte - Para Netflix individual y grupal */}
+                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_tres_grupal') && activity.report && (
+                              <a
+                                href={activity.report}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
                               >
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                 </svg>
                                 <span>Reporte</span>
-                              </button>
+                              </a>
                             )}
-
-                            <a
-                              href={`/files/notebooks/${activity.notebook}`}
-                              download
-                              className="btn-primary flex items-center justify-center space-x-1 text-sm px-3 py-2 col-span-2"
-                            >
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
-                              <span>Descargar Notebook</span>
-                            </a>
                           </div>
                         </div>
                       ))}
