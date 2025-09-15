@@ -100,48 +100,19 @@ const Course = () => {
               <div className="space-y-6">
                 <div className="text-center">
                   <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                    Ingeniería de Datos Avanzada
+                    Ingeniería de Datos
                   </h3>
                   <p className="text-lg text-gray-600 mb-6">
-                    Curso especializado en el diseño, implementación y mantenimiento de sistemas de datos a gran escala
+                    El curso Ingeniería de datos se centra en los aspectos fundamentales para la preparación, tratamiento y representación de los datos; los cuales son esenciales en cualquier proyecto.
                   </p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-bold text-gray-900">Objetivos del Curso</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Dominar las arquitecturas modernas de datos</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Implementar pipelines de datos robustos</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Aplicar mejores prácticas de ingeniería</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-bold text-gray-900">Metodología</h4>
-                    <ul className="space-y-2">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Clases teóricas y prácticas</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Proyectos hands-on</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-secondary-500 rounded-full mt-2"></div>
-                        <span className="text-gray-700">Casos de estudio reales</span>
-                      </li>
-                    </ul>
+                <div className="space-y-6">
+                  <div className="bg-white rounded-xl p-6 shadow-md">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Objetivos del curso</h4>
+                    <p className="text-gray-700 leading-relaxed">
+                      Espero ser capaz de dominar las técnicas de preparación y limpieza de datos para usarlos en modelos de IA.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -205,52 +176,10 @@ const Course = () => {
               <div className="space-y-8">
                 <div className="text-center">
                   <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center">
-                    <span className="text-4xl font-bold text-white">DR</span>
+                    <span className="text-4xl font-bold text-white">JK</span>
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Dr. Data Rodriguez</h3>
-                  <p className="text-xl text-primary-600 font-medium">Profesor de Ingeniería de Datos</p>
-                </div>
-                
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-bold text-gray-900">Experiencia Profesional</h4>
-                    <ul className="space-y-3 text-gray-700">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                        <span>15+ años en ingeniería de datos y Big Data</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                        <span>Ex-Google, ex-Microsoft, actualmente en startup unicornio</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-primary-500 rounded-full mt-2"></div>
-                        <span>Autor de 3 libros sobre arquitecturas de datos</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    <h4 className="text-xl font-bold text-gray-900">Especialidades</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {['Apache Spark', 'Kafka', 'Kubernetes', 'Python', 'Scala', 'AWS', 'GCP', 'Machine Learning'].map((skill) => (
-                        <span key={skill} className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="bg-white rounded-xl p-6 shadow-md">
-                  <h4 className="text-xl font-bold text-gray-900 mb-4">Filosofía de Enseñanza</h4>
-                  <p className="text-gray-700 leading-relaxed">
-                    "Creo en el aprendizaje hands-on y en la aplicación práctica de conceptos teóricos. 
-                    Mi objetivo es preparar a los estudiantes para enfrentar los desafíos reales de la 
-                    industria, no solo para aprobar exámenes. La ingeniería de datos es un campo en 
-                    constante evolución, y mi enfoque es enseñar los fundamentos sólidos que perdurarán 
-                    independientemente de las tecnologías específicas."
-                  </p>
+                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Juan Francisco Kurucz</h3>
+                  <p className="text-xl text-primary-600 font-medium">Docente del curso</p>
                 </div>
               </div>
             )}
@@ -260,6 +189,25 @@ const Course = () => {
                 <h3 className="text-3xl font-bold text-gray-900 text-center mb-8">
                   Programa del Curso
                 </h3>
+                
+                <div className="text-center mb-8">
+                  <div className="bg-white rounded-xl p-8 shadow-md">
+                    <h4 className="text-xl font-bold text-gray-900 mb-4">Syllabus Oficial 2025</h4>
+                    <p className="text-gray-600 mb-6">
+                      Descarga el programa completo del curso con todos los detalles, cronograma y evaluaciones.
+                    </p>
+                    <a
+                      href="/syl/Syllabus 2025.pdf"
+                      download="Syllabus_Ingenieria_Datos_2025.pdf"
+                      className="inline-flex items-center px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-colors duration-200"
+                    >
+                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      </svg>
+                      Descargar Syllabus PDF
+                    </a>
+                  </div>
+                </div>
                 
                 <div className="space-y-6">
                   {syllabus.map((unit, index) => (
