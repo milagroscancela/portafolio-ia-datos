@@ -7,7 +7,6 @@ import Skills from '../../components/Skills';
 import PreviousKnowledge from '../../components/PreviousKnowledge';
 import Course from '../../components/Course';
 import Notes from '../../components/Notes';
-import Activities from '../../components/Activities';
 import Portfolio from '../../components/Portfolio';
 import Footer from '../../components/Footer';
 import CustomCursor from '../../components/CustomCursor';
@@ -74,7 +73,6 @@ export default function HomePage() {
       <Course />
       <Notes />
       <Portfolio />
-      <Activities />
       <Footer />
     </div>
   );

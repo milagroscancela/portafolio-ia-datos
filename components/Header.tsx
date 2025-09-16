@@ -24,7 +24,6 @@ const Header = () => {
     { name: 'Curso', href: '#course' }, 
     { name: 'Apuntes', href: '#notes' },
     { name: 'Portafolio', href: '#portfolio' },
-    { name: 'Actividades', href: '#activities' },
   ];
 
   return (
