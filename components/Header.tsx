@@ -37,7 +37,7 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-white dark:text-white">
+          <Link href="/" className="text-2xl font-bold text-violet-600 dark:text-violet-400">
             Portafolio de Milagros Cancela
           </Link>
 
