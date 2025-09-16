@@ -161,15 +161,6 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
     <section id="activities" className="py-20 gradient-bg dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              <span className="text-black dark:text-white">Actividades</span> UT1
-            </h2>
-            <p className="text-xl text-gray-800 dark:text-white max-w-3xl mx-auto">
-              Trabajos prácticos realizados durante la primera unidad del curso
-            </p>
-          </div>
 
           {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
