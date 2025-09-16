@@ -37,8 +37,8 @@ const Header = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-violet-600 dark:text-violet-400">
-            Portafolio de Milagros Cancela
+          <Link href="/" className="text-3xl font-black text-violet-600 dark:text-violet-400 transform hover:scale-105 transition-all duration-300">
+            <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent animate-pulse">Portafolio de Milagros Cancela</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,7 +47,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 font-bold text-lg transform hover:scale-110 hover:shadow-lg"
               >
                 {item.name}
               </Link>

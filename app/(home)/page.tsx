@@ -43,22 +43,22 @@ export default function HomePage() {
       <section className="pt-20 pb-16 gradient-bg dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-violet-600 dark:text-violet-400 mb-6 animate-fade-in">
-              <span className="text-violet-600 dark:text-violet-400">Portafolio de Milagros Cancela</span>
+            <h1 className="text-6xl md:text-8xl font-black text-violet-600 dark:text-violet-400 mb-6 animate-fade-in transform hover:scale-105 transition-all duration-300">
+              <span className="text-violet-600 dark:text-violet-400 bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent animate-pulse">Portafolio de Milagros Cancela</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-800 dark:text-gray-300 mb-8 animate-slide-up">
-              Explorando el mundo de los datos, transformando información en insights valiosos
+            <p className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-300 mb-8 animate-slide-up transform hover:scale-105 transition-all duration-300">
+              <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">Explorando el mundo de los datos, transformando información en insights valiosos</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <a
                 href="#about"
-                className="btn-primary text-lg px-8 py-4"
+                className="btn-primary text-xl font-bold px-10 py-5 transform hover:scale-110 hover:shadow-2xl transition-all duration-300 animate-bounce"
               >
                 Conoce mi Historia
               </a>
               <a
                 href="#portfolio"
-                className="btn-secondary text-lg px-8 py-4"
+                className="btn-secondary text-xl font-bold px-10 py-5 transform hover:scale-110 hover:shadow-2xl transition-all duration-300 animate-bounce"
               >
                 Ver Proyectos
               </a>

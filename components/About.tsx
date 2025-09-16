@@ -47,8 +47,8 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-violet-600 dark:text-violet-400 mb-4">
-              Sobre <span className="text-violet-600 dark:text-violet-400">mí</span>
+            <h2 className="text-5xl md:text-6xl font-black text-violet-600 dark:text-violet-400 mb-4 transform hover:scale-105 transition-all duration-300">
+              Sobre <span className="text-violet-600 dark:text-violet-400 bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent animate-pulse">mí</span>
             </h2>
             <p className="text-xl text-gray-800 dark:text-white max-w-2xl mx-auto">
               Estudiante de ingeniería en IA y Ciencia de Datos apasionada por la transformación de datos en insights valiosos
