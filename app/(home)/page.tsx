@@ -46,8 +46,8 @@ export default function HomePage() {
             <h1 className="text-6xl md:text-8xl font-black text-violet-600 dark:text-violet-400 mb-6 animate-fade-in transform hover:scale-105 transition-all duration-300">
               <span className="text-violet-600 dark:text-violet-400 bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent animate-pulse">Portafolio de Milagros Cancela</span>
             </h1>
-            <p className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-300 mb-8 animate-slide-up transform hover:scale-105 transition-all duration-300">
-              <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-300 dark:to-gray-100 bg-clip-text text-transparent">Explorando el mundo de los datos, transformando información en insights valiosos</span>
+            <p className="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-black mb-8 animate-slide-up transform hover:scale-105 transition-all duration-300">
+              <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-black dark:to-gray-800 bg-clip-text text-transparent">Explorando el mundo de los datos, transformando información en insights valiosos</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
               <a
