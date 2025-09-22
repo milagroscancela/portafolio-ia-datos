@@ -151,10 +151,10 @@ const About = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105"
+                    className="flex items-center space-x-2 px-4 py-2 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-200 hover:scale-105 text-violet-600 hover:text-violet-700"
                   >
                     {link.icon}
-                    <span className="font-medium text-gray-700">{link.name}</span>
+                    <span className="font-medium text-violet-600">{link.name}</span>
                   </a>
                 ))}
                 <a
