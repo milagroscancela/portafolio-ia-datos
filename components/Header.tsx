@@ -46,7 +46,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 text-gray-300 hover:text-primary-600 hover:text-primary-400 transition-all duration-300 font-bold text-lg transform hover:scale-110 hover:shadow-lg"
+                className="text-black hover:text-violet-600 transition-all duration-300 font-bold text-lg transform hover:scale-110 hover:shadow-lg"
               >
                 {item.name}
               </Link>
@@ -82,7 +82,7 @@ const Header = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 text-gray-300 hover:text-primary-600 hover:text-primary-400 transition-colors duration-200 font-medium py-2"
+                  className="text-black hover:text-violet-600 transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
