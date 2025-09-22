@@ -445,7 +445,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                             </p>
                             <div className="flex items-center text-sm text-gray-500 text-gray-400 mb-4">
                               <span className="mr-4">📅 {activity.date}</span>
-                              <span className="px-2 py-1 bg-blue-100 bg-blue-900 text-blue-700 text-blue-300 rounded-full text-xs">
+                              <span className="px-2 py-1 bg-violet-100 text-violet-700 rounded-full text-xs">
                                 Notebook disponible
                               </span>
                             </div>
