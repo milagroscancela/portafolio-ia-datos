@@ -168,29 +168,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/Practica_5_Missing_Data_Detective/',
       visualizations: [],
       report: '',
-      reflection: `La Actividad 5 Missing Data Detective fue una experiencia transformadora en mi comprensión de la calidad de datos.
-
-**Desafíos del missing data:**
-- Identificación de patrones complejos de datos faltantes
-- Análisis de la naturaleza de los valores faltantes (MCAR, MAR, MNAR)
-- Evaluación del impacto de diferentes estrategias de imputación
-
-**Técnicas dominadas:**
-- Visualización avanzada de patrones de missing data
-- Implementación de algoritmos de imputación (mean, median, mode, KNN)
-- Validación cruzada para evaluar la calidad de la imputación
-- Análisis estadístico de la distribución de valores faltantes
-
-**Insights descubiertos:**
-- Patrones temporales en los datos faltantes
-- Correlaciones entre variables y la probabilidad de missing values
-- Impacto de diferentes métodos de imputación en los resultados
-
-**Aplicación profesional:**
-Esta actividad me enseñó que la calidad de los datos es fundamental para cualquier análisis. Aprendí que la imputación no es solo reemplazar valores, sino entender la naturaleza de los datos faltantes y elegir la estrategia más apropiada para cada caso.
-
-**Trabajo colaborativo:**
-El trabajo en equipo fue crucial para esta actividad, permitiendo discutir diferentes enfoques y validar resultados desde múltiples perspectivas.`
+      reflection: ''
     }
   ];
 
