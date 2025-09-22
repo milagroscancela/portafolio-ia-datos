@@ -355,10 +355,10 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-white mb-4">
-              <span className="text-black text-white">Portafolio</span> de Trabajos
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              <span className="text-black">Portafolio</span> de Trabajos
             </h2>
-            <p className="text-xl text-gray-800 text-white max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 max-w-3xl mx-auto">
               Organización por unidades de todos los ejercicios, proyectos y reflexiones del curso
             </p>
           </div>
@@ -391,7 +391,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
           {currentUnit && (
             <div className="space-y-8">
               {/* Unit Header */}
-              <div className={`bg-gradient-to-r ${currentUnit.color} rounded-2xl p-8 text-white`}>
+              <div className={`bg-gradient-to-r ${currentUnit.color} rounded-2xl p-8 `}>
                 <h3 className="text-3xl font-bold mb-2">{currentUnit.id}</h3>
                 <h4 className="text-xl font-semibold mb-4">{currentUnit.title}</h4>
                 <p className="text-lg opacity-90">{currentUnit.description}</p>
@@ -399,7 +399,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
 
               {/* Exercises */}
               <div className="space-y-6">
-                <h5 className="text-2xl font-bold text-gray-900 text-white mb-6">
+                <h5 className="text-2xl font-bold text-gray-900 mb-6">
                   Ejercicios y Proyectos ({(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.filter(activity => activity.unit === activeUnit).length : groupActivities.filter(activity => activity.unit === activeUnit).length) : currentUnit.exercises.length})
                 </h5>
                 
@@ -434,10 +434,10 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                         .map((activity) => (
                         <div
                           key={activity.id}
-                          className="bg-white bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover"
+                          className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover"
                         >
                           <div className="mb-4">
-                            <h3 className="text-xl font-bold text-gray-900 text-white mb-2">
+                            <h3 className="text-xl font-bold text-gray-900 mb-2">
                               {activity.title}
                             </h3>
                             <p className="text-gray-600 text-gray-300 mb-3">
@@ -552,7 +552,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                   <div className="bg-gradient-to-br from-primary-50 to-secondary-50 from-gray-800 to-gray-700 rounded-2xl p-8 shadow-lg text-center">
                     <div className="mb-6">
                       <div className="text-6xl mb-4">📚</div>
-                      <h3 className="text-3xl font-bold text-gray-900 text-white mb-4">Sin contenido disponible</h3>
+                      <h3 className="text-3xl font-bold text-gray-900 mb-4">Sin contenido disponible</h3>
                       <p className="text-gray-600 text-gray-300 text-xl">Esta sección estará disponible próximamente</p>
                     </div>
                   </div>
@@ -694,10 +694,10 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       {/* Reflection Modal */}
       {selectedActivity && !showNotebook && !showReport && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 text-white">
+                <h3 className="text-2xl font-bold text-gray-900">
                   Reflexión - {selectedActivity.title}
                 </h3>
                 <button
@@ -723,10 +723,10 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       {/* Notebook Modal */}
       {showNotebook && selectedActivity && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 text-white">
+                <h3 className="text-2xl font-bold text-gray-900">
                   Jupyter Notebook - {selectedActivity.title}
                 </h3>
                 <button
@@ -739,7 +739,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                 </button>
               </div>
               
-              <div className="bg-gray-100 bg-gray-700 rounded-lg p-4 mb-4">
+              <div className="bg-gray-100 rounded-lg p-4 mb-4">
                 <p className="text-sm text-gray-600 text-gray-300 mb-2">
                   <strong>Notebook:</strong> {selectedActivity.notebook}
                 </p>
@@ -764,7 +764,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                   <div className="space-y-3">
                     <div className="bg-gray-800 rounded p-3">
                       <div className="text-blue-400 mb-2">In [1]:</div>
-                      <div className="text-white">
+                      <div className="">
                         <span className="text-purple-400">import</span> pandas <span className="text-purple-400">as</span> pd<br/>
                         <span className="text-purple-400">import</span> matplotlib.pyplot <span className="text-purple-400">as</span> plt<br/>
                         <span className="text-purple-400">import</span> seaborn <span className="text-purple-400">as</span> sns
@@ -778,7 +778,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                     
                     <div className="bg-gray-800 rounded p-3">
                       <div className="text-blue-400 mb-2">In [2]:</div>
-                      <div className="text-white">
+                      <div className="">
                         <span className="text-gray-400"># Cargar datos</span><br/>
                         df = pd.read_csv(<span className="text-green-400">'data.csv'</span>)
                       </div>
@@ -817,10 +817,10 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       {/* Report Modal */}
       {showReport && selectedActivity && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 text-white">
+                <h3 className="text-2xl font-bold text-gray-900">
                   Reporte - {selectedActivity.title}
                 </h3>
                 <button
@@ -833,7 +833,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                 </button>
               </div>
               
-              <div className="bg-gray-100 bg-gray-700 rounded-lg p-4 mb-4">
+              <div className="bg-gray-100 rounded-lg p-4 mb-4">
                 <p className="text-sm text-gray-600 text-gray-300 mb-2">
                   <strong>Reporte:</strong> {selectedActivity.report}
                 </p>
@@ -845,7 +845,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
               <div className="bg-white bg-gray-900 rounded-lg p-4 border border-gray-200 border-gray-600">
                 <div className="text-center py-8">
                   <div className="text-6xl mb-4">📊</div>
-                  <h4 className="text-xl font-bold text-gray-900 text-white mb-2">Reporte HTML</h4>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">Reporte HTML</h4>
                   <p className="text-gray-600 text-gray-300 mb-4">
                     El reporte se mostraría aquí con todas las visualizaciones y análisis
                   </p>
