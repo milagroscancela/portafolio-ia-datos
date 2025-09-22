@@ -75,7 +75,7 @@ const Course = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-6">
                     <div className="bg-white rounded-xl p-6 shadow-md">
-                      <h4 className="text-xl font-bold text-primary-600 mb-4">Aprendizaje Técnico</h4>
+                      <h4 className="text-xl font-bold text-black mb-4">Aprendizaje Técnico</h4>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Profundizar en arquitecturas de datos modernas</li>
                         <li>• Dominar herramientas como Apache Kafka, Spark</li>
@@ -85,7 +85,7 @@ const Course = () => {
                     </div>
                     
                     <div className="bg-white rounded-xl p-6 shadow-md">
-                      <h4 className="text-xl font-bold text-secondary-600 mb-4">Desarrollo Profesional</h4>
+                      <h4 className="text-xl font-bold text-black mb-4">Desarrollo Profesional</h4>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Mejorar habilidades de liderazgo técnico</li>
                         <li>• Aprender mejores prácticas de la industria</li>
@@ -97,7 +97,7 @@ const Course = () => {
                   
                   <div className="space-y-6">
                     <div className="bg-white rounded-xl p-6 shadow-md">
-                      <h4 className="text-xl font-bold text-accent-600 mb-4">Proyectos Prácticos</h4>
+                      <h4 className="text-xl font-bold text-black mb-4">Proyectos Prácticos</h4>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Construir un pipeline completo end-to-end</li>
                         <li>• Implementar monitoreo y observabilidad</li>
@@ -107,7 +107,7 @@ const Course = () => {
                     </div>
                     
                     <div className="bg-white rounded-xl p-6 shadow-md">
-                      <h4 className="text-xl font-bold text-primary-600 mb-4">Red y Colaboración</h4>
+                      <h4 className="text-xl font-bold text-black mb-4">Red y Colaboración</h4>
                       <ul className="space-y-2 text-gray-700">
                         <li>• Conectar con otros profesionales del área</li>
                         <li>• Participar en discusiones técnicas</li>
