@@ -350,15 +350,15 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
   const currentUnit = units.find(unit => unit.id === activeUnit);
 
   return (
-    <section id="portfolio" className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              <span className="text-black dark:text-white">Portafolio</span> de Trabajos
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-white mb-4">
+              <span className="text-black text-white">Portafolio</span> de Trabajos
             </h2>
-            <p className="text-xl text-gray-800 dark:text-white max-w-3xl mx-auto">
+            <p className="text-xl text-gray-800 text-white max-w-3xl mx-auto">
               Organización por unidades de todos los ejercicios, proyectos y reflexiones del curso
             </p>
           </div>
@@ -399,7 +399,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
 
               {/* Exercises */}
               <div className="space-y-6">
-                <h5 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+                <h5 className="text-2xl font-bold text-gray-900 text-white mb-6">
                   Ejercicios y Proyectos ({(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.filter(activity => activity.unit === activeUnit).length : groupActivities.filter(activity => activity.unit === activeUnit).length) : currentUnit.exercises.length})
                 </h5>
                 
@@ -434,18 +434,18 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                         .map((activity) => (
                         <div
                           key={activity.id}
-                          className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover"
+                          className="bg-white bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover"
                         >
                           <div className="mb-4">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                            <h3 className="text-xl font-bold text-gray-900 text-white mb-2">
                               {activity.title}
                             </h3>
-                            <p className="text-gray-600 dark:text-gray-300 mb-3">
+                            <p className="text-gray-600 text-gray-300 mb-3">
                               {activity.description}
                             </p>
-                            <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-4">
+                            <div className="flex items-center text-sm text-gray-500 text-gray-400 mb-4">
                               <span className="mr-4">📅 {activity.date}</span>
-                              <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded-full text-xs">
+                              <span className="px-2 py-1 bg-blue-100 bg-blue-900 text-blue-700 text-blue-300 rounded-full text-xs">
                                 Notebook disponible
                               </span>
                             </div>
@@ -549,11 +549,11 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                     </div>
                   </div>
                 ) : currentUnit.exercises.length === 0 ? (
-                  <div className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 shadow-lg text-center">
+                  <div className="bg-gradient-to-br from-primary-50 to-secondary-50 from-gray-800 to-gray-700 rounded-2xl p-8 shadow-lg text-center">
                     <div className="mb-6">
                       <div className="text-6xl mb-4">📚</div>
-                      <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Sin contenido disponible</h3>
-                      <p className="text-gray-600 dark:text-gray-300 text-xl">Esta sección estará disponible próximamente</p>
+                      <h3 className="text-3xl font-bold text-gray-900 text-white mb-4">Sin contenido disponible</h3>
+                      <p className="text-gray-600 text-gray-300 text-xl">Esta sección estará disponible próximamente</p>
                     </div>
                   </div>
                 ) : (
@@ -694,15 +694,15 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       {/* Reflection Modal */}
       {selectedActivity && !showNotebook && !showReport && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
+          <div className="bg-white bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-bold text-gray-900 text-white">
                   Reflexión - {selectedActivity.title}
                 </h3>
                 <button
                   onClick={closeReflection}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  className="text-gray-400 hover:text-gray-600 hover:text-gray-300 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -711,7 +711,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
               </div>
               
               <div className="prose max-w-none">
-                <div className="whitespace-pre-line text-gray-700 dark:text-gray-300 leading-relaxed">
+                <div className="whitespace-pre-line text-gray-700 text-gray-300 leading-relaxed">
                   {selectedActivity.reflection}
                 </div>
               </div>
@@ -723,15 +723,15 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       {/* Notebook Modal */}
       {showNotebook && selectedActivity && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-bold text-gray-900 text-white">
                   Jupyter Notebook - {selectedActivity.title}
                 </h3>
                 <button
                   onClick={closeNotebook}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  className="text-gray-400 hover:text-gray-600 hover:text-gray-300 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -739,11 +739,11 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                 </button>
               </div>
               
-              <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 mb-4">
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+              <div className="bg-gray-100 bg-gray-700 rounded-lg p-4 mb-4">
+                <p className="text-sm text-gray-600 text-gray-300 mb-2">
                   <strong>Notebook:</strong> {selectedActivity.notebook}
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-sm text-gray-600 text-gray-300">
                   <strong>Descripción:</strong> {selectedActivity.description}
                 </p>
               </div>
@@ -817,15 +817,15 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       {/* Report Modal */}
       {showReport && selectedActivity && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-bold text-gray-900 text-white">
                   Reporte - {selectedActivity.title}
                 </h3>
                 <button
                   onClick={closeReport}
-                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                  className="text-gray-400 hover:text-gray-600 hover:text-gray-300 transition-colors"
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -833,20 +833,20 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                 </button>
               </div>
               
-              <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4 mb-4">
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+              <div className="bg-gray-100 bg-gray-700 rounded-lg p-4 mb-4">
+                <p className="text-sm text-gray-600 text-gray-300 mb-2">
                   <strong>Reporte:</strong> {selectedActivity.report}
                 </p>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
+                <p className="text-sm text-gray-600 text-gray-300">
                   <strong>Descripción:</strong> Reporte HTML generado con los resultados del análisis
                 </p>
               </div>
 
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+              <div className="bg-white bg-gray-900 rounded-lg p-4 border border-gray-200 border-gray-600">
                 <div className="text-center py-8">
                   <div className="text-6xl mb-4">📊</div>
-                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Reporte HTML</h4>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  <h4 className="text-xl font-bold text-gray-900 text-white mb-2">Reporte HTML</h4>
+                  <p className="text-gray-600 text-gray-300 mb-4">
                     El reporte se mostraría aquí con todas las visualizaciones y análisis
                   </p>
                   <a
