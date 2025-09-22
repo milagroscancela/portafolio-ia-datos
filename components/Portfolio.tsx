@@ -17,6 +17,7 @@ const Portfolio = () => {
       title: 'Actividad 2 - Análisis del Dataset Iris',
       description: 'Análisis completo del dataset clásico de Iris con visualizaciones avanzadas',
       date: '2024-09-07',
+      unit: 'UT1',
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_dos_iris/dataset_iris/',
       visualizations: [],
       report: '',
@@ -40,6 +41,7 @@ Esta actividad me mostró la complejidad real de los proyectos de datos y la imp
       title: 'Actividad 3 - EDA Netflix',
       description: 'Análisis exploratorio del dataset de Netflix con dashboard interactivo',
       date: '2024-09-10',
+      unit: 'UT1',
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_netflix/eda_netflix/',
       visualizations: [],
       report: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_netflix/netflix_eda_report.html',
@@ -68,6 +70,7 @@ Esta experiencia me preparó para trabajar con datasets reales y complejos, desa
       title: 'Actividad 4 - EDA Multi-fuentes Individual',
       description: 'Análisis exploratorio de múltiples fuentes de datos con operaciones de join y limpieza avanzada',
       date: '2024-09-15',
+      unit: 'UT1',
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cuatro_individual/pract_cuatro/',
       visualizations: [],
       report: '',
@@ -101,6 +104,7 @@ Esta experiencia me preparó para enfrentar desafíos reales de integración de 
       title: 'Actividad 5 - Missing Data Detective Individual',
       description: 'Análisis individual de datos faltantes con técnicas avanzadas de detección, imputación y visualización',
       date: '2024-09-20',
+      unit: 'UT2',
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_ind/pract_cinco/',
       visualizations: [],
       report: '',
@@ -138,6 +142,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       title: 'Actividad 3 - EDA Netflix Grupal',
       description: 'Análisis exploratorio del dataset de Netflix con trabajo colaborativo',
       date: '2024-09-10',
+      unit: 'UT1',
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_grupal/Practica03/',
       visualizations: [],
       report: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_tres_grupal/netflix_eda_report.html',
@@ -148,6 +153,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       title: 'Actividad 4 - EDA Multi-fuentes y Joins',
       description: 'Análisis de múltiples fuentes de datos con operaciones de join',
       date: '2024-09-12',
+      unit: 'UT1',
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cuatro_grupal/Practica_4_EDA_Multi_fuentes_y_Joins_Fill_in_the_Blanks/',
       visualizations: [],
       report: '',
@@ -158,6 +164,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
       title: 'Actividad 5 - Missing Data Detective',
       description: 'Detección y análisis de datos faltantes con técnicas avanzadas de imputación y visualización',
       date: '2024-09-18',
+      unit: 'UT2',
       notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/Practica_5_Missing_Data_Detective/',
       visualizations: [],
       report: '',
@@ -415,7 +422,7 @@ El trabajo en equipo fue crucial para esta actividad, permitiendo discutir difer
               {/* Exercises */}
               <div className="space-y-6">
                 <h5 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  Ejercicios y Proyectos ({(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.length : groupActivities.length) : currentUnit.exercises.length})
+                  Ejercicios y Proyectos ({(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.filter(activity => activity.unit === activeUnit).length : groupActivities.filter(activity => activity.unit === activeUnit).length) : currentUnit.exercises.length})
                 </h5>
                 
                 {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (
@@ -444,7 +451,9 @@ El trabajo en equipo fue crucial para esta actividad, permitiendo discutir difer
 
                     {/* Activities Grid */}
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                      {(activeTab === 'individual' ? individualActivities : groupActivities).map((activity) => (
+                      {(activeTab === 'individual' ? individualActivities : groupActivities)
+                        .filter(activity => activity.unit === activeUnit)
+                        .map((activity) => (
                         <div
                           key={activity.id}
                           className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 card-hover"
@@ -687,13 +696,13 @@ El trabajo en equipo fue crucial para esta actividad, permitiendo discutir difer
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div className="bg-white rounded-lg p-4">
                     <div className="text-2xl font-bold text-primary-600">
-                      {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.length : groupActivities.length) : currentUnit.exercises.length}
+                      {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.filter(activity => activity.unit === activeUnit).length : groupActivities.filter(activity => activity.unit === activeUnit).length) : currentUnit.exercises.length}
                     </div>
                     <div className="text-sm text-gray-600">Ejercicios</div>
                   </div>
                   <div className="bg-white rounded-lg p-4">
                     <div className="text-2xl font-bold text-secondary-600">
-                      {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.length : groupActivities.length) : currentUnit.exercises.filter(e => e.status === 'Completado').length}
+                      {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.filter(activity => activity.unit === activeUnit).length : groupActivities.filter(activity => activity.unit === activeUnit).length) : currentUnit.exercises.filter(e => e.status === 'Completado').length}
                     </div>
                     <div className="text-sm text-gray-600">Completados</div>
                   </div>
