@@ -95,6 +95,40 @@ Esta actividad me enseñó que el verdadero valor de los datos está en su integ
 
 **Aplicación profesional:**
 Esta experiencia me preparó para enfrentar desafíos reales de integración de datos en entornos empresariales, donde la calidad y consistencia de los datos son fundamentales para el éxito de cualquier análisis.`
+    },
+    {
+      id: 'act_cinco_individual',
+      title: 'Actividad 5 - Missing Data Detective Individual',
+      description: 'Análisis individual de datos faltantes con técnicas avanzadas de detección, imputación y visualización',
+      date: '2024-09-20',
+      notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_ind/pract_cinco/',
+      visualizations: [],
+      report: '',
+      reflection: `La Actividad 5 Individual Missing Data Detective fue una experiencia profundamente transformadora en mi comprensión de la calidad de datos.
+
+**Desafíos técnicos individuales:**
+- Análisis independiente de patrones complejos de missing data
+- Implementación de múltiples estrategias de imputación
+- Evaluación crítica de la efectividad de cada método
+- Creación de visualizaciones avanzadas para comunicar hallazgos
+
+**Técnicas dominadas individualmente:**
+- Análisis estadístico de la naturaleza de los datos faltantes (MCAR, MAR, MNAR)
+- Implementación de algoritmos de imputación (mean, median, mode, KNN, regresión)
+- Validación cruzada para evaluar la calidad de la imputación
+- Visualización creativa de patrones de missing data
+
+**Insights personales descubiertos:**
+- Identificación de patrones temporales específicos en los datos faltantes
+- Correlaciones sutiles entre variables y la probabilidad de missing values
+- Impacto diferenciado de cada método de imputación en los resultados
+- Importancia de la documentación en procesos de imputación
+
+**Crecimiento personal:**
+Esta actividad individual me enseñó a ser más meticulosa y crítica en el análisis de datos. Aprendí que la imputación no es solo una técnica, sino un proceso de toma de decisiones que requiere comprensión profunda del contexto y los datos.
+
+**Aplicación profesional:**
+Esta experiencia me preparó para ser autónoma en la resolución de problemas de calidad de datos, desarrollando la capacidad de evaluar críticamente diferentes enfoques y elegir la estrategia más apropiada para cada situación específica.`
     }
   ];
 
@@ -433,8 +467,8 @@ El trabajo en equipo fue crucial para esta actividad, permitiendo discutir difer
 
                           {/* Actions */}
                           <div className="flex flex-wrap gap-2">
-                            {/* Reflexión - Para Netflix individual, Iris individual, Actividad 4 individual y Actividad 5 grupal */}
-                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris' || activity.id === 'act_cuatro_individual' || activity.id === 'act_cinco_grupal') && activity.reflection && (
+                            {/* Reflexión - Para Netflix individual, Iris individual, Actividad 4 individual, Actividad 5 individual y Actividad 5 grupal */}
+                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris' || activity.id === 'act_cuatro_individual' || activity.id === 'act_cinco_individual' || activity.id === 'act_cinco_grupal') && activity.reflection && (
                               <button
                                 onClick={() => openReflection(activity)}
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
@@ -474,10 +508,13 @@ El trabajo en equipo fue crucial para esta actividad, permitiendo discutir difer
                               </a>
                             )}
 
-                            {/* Visualizaciones - Para Actividad 5 grupal */}
-                            {activity.id === 'act_cinco_grupal' && (
+                            {/* Visualizaciones - Para Actividad 5 grupal e individual */}
+                            {(activity.id === 'act_cinco_grupal' || activity.id === 'act_cinco_individual') && (
                               <a
-                                href="https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/resultados/"
+                                href={activity.id === 'act_cinco_grupal' 
+                                  ? "https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/resultados/"
+                                  : "https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_ind/resu_act_5/"
+                                }
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
