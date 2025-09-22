@@ -20,7 +20,7 @@ const Course = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              <span className="text-black dark:text-white">Curso</span> de Ingeniería de Datos
+              <span className="text-black">Curso</span> de Ingeniería de Datos
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explorando las mejores prácticas y tecnologías en el campo de la ingeniería de datos
@@ -126,8 +126,8 @@ const Course = () => {
                   <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-primary-400 to-secondary-400 rounded-full flex items-center justify-center">
                     <span className="text-4xl font-bold text-white">JK</span>
                   </div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Juan Francisco Kurucz</h3>
-                  <p className="text-xl text-primary-600 font-medium">Docente del curso</p>
+                  <h3 className="text-3xl font-bold text-black mb-2">Juan Francisco Kurucz</h3>
+                  <p className="text-xl text-black font-medium">Docente del curso</p>
                 </div>
               </div>
             )}

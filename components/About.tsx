@@ -68,7 +68,7 @@ const About = () => {
                     />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Milagros Cancela</h3>
-                  <p className="text-primary-600 font-medium">Estudiante de Ingeniería en IA y Ciencia de Datos</p>
+                  <p className="text-black font-medium">Estudiante de Ingeniería en IA y Ciencia de Datos</p>
                 </div>
               </div>
             </div>

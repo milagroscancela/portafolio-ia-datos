@@ -198,7 +198,7 @@ const Notes = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              <span className="text-black dark:text-white">Apuntes</span> del Curso
+              <span className="text-black">Apuntes</span> del Curso
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Recopilación organizada de todos los materiales y recursos del curso
