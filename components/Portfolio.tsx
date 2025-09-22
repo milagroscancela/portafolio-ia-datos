@@ -679,7 +679,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                     <div className="text-sm text-gray-600">Ejercicios</div>
                   </div>
                   <div className="bg-white rounded-lg p-4">
-                    <div className="text-2xl font-bold text-secondary-600">
+                    <div className="text-2xl font-bold text-black">
                       {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.filter(activity => activity.unit === activeUnit).length : groupActivities.filter(activity => activity.unit === activeUnit).length) : currentUnit.exercises.filter(e => e.status === 'Completado').length}
                     </div>
                     <div className="text-sm text-gray-600">Completados</div>
