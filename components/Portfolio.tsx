@@ -118,6 +118,38 @@ Esta experiencia me preparó para enfrentar desafíos reales de integración de 
       visualizations: [],
       report: '',
       reflection: ''
+    },
+    {
+      id: 'act_cinco_grupal',
+      title: 'Actividad 5 - Missing Data Detective',
+      description: 'Detección y análisis de datos faltantes con técnicas avanzadas de imputación y visualización',
+      date: '2024-09-18',
+      notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/Practica_5_Missing_Data_Detective/',
+      visualizations: [],
+      report: '',
+      reflection: `La Actividad 5 Missing Data Detective fue una experiencia transformadora en mi comprensión de la calidad de datos.
+
+**Desafíos del missing data:**
+- Identificación de patrones complejos de datos faltantes
+- Análisis de la naturaleza de los valores faltantes (MCAR, MAR, MNAR)
+- Evaluación del impacto de diferentes estrategias de imputación
+
+**Técnicas dominadas:**
+- Visualización avanzada de patrones de missing data
+- Implementación de algoritmos de imputación (mean, median, mode, KNN)
+- Validación cruzada para evaluar la calidad de la imputación
+- Análisis estadístico de la distribución de valores faltantes
+
+**Insights descubiertos:**
+- Patrones temporales en los datos faltantes
+- Correlaciones entre variables y la probabilidad de missing values
+- Impacto de diferentes métodos de imputación en los resultados
+
+**Aplicación profesional:**
+Esta actividad me enseñó que la calidad de los datos es fundamental para cualquier análisis. Aprendí que la imputación no es solo reemplazar valores, sino entender la naturaleza de los datos faltantes y elegir la estrategia más apropiada para cada caso.
+
+**Trabajo colaborativo:**
+El trabajo en equipo fue crucial para esta actividad, permitiendo discutir diferentes enfoques y validar resultados desde múltiples perspectivas.`
     }
   ];
 
@@ -179,7 +211,19 @@ Esta experiencia me preparó para enfrentar desafíos reales de integración de 
       title: 'Limpieza y Calidad de Datos',
       description: 'Detección de missing data y outliers, estrategias de imputación, pipelines de limpieza reproducibles y consideraciones éticas',
       color: 'from-secondary-400 to-secondary-600',
-      exercises: []
+      exercises: [
+        {
+          id: 'UT2-E1',
+          title: 'Missing Data Detective',
+          description: 'Detección y análisis de datos faltantes con técnicas avanzadas de imputación y visualización',
+          type: 'Grupal',
+          status: 'Completado',
+          notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/Practica_5_Missing_Data_Detective/',
+          visualization: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/resultados/',
+          reflection: 'La Actividad 5 Missing Data Detective fue una experiencia transformadora en mi comprensión de la calidad de datos. Aprendí a identificar patrones complejos de datos faltantes, implementar algoritmos de imputación avanzados y evaluar el impacto de diferentes estrategias. El trabajo colaborativo fue crucial para discutir enfoques y validar resultados desde múltiples perspectivas.',
+          documentation: ['Missing Data Analysis Guide', 'Imputation Techniques', 'Data Quality Assessment']
+        }
+      ]
     }
     // Temporarily hidden units
     // {
@@ -389,8 +433,8 @@ Esta experiencia me preparó para enfrentar desafíos reales de integración de 
 
                           {/* Actions */}
                           <div className="flex flex-wrap gap-2">
-                            {/* Reflexión - Para Netflix individual, Iris individual y Actividad 4 individual */}
-                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris' || activity.id === 'act_cuatro_individual') && activity.reflection && (
+                            {/* Reflexión - Para Netflix individual, Iris individual, Actividad 4 individual y Actividad 5 grupal */}
+                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris' || activity.id === 'act_cuatro_individual' || activity.id === 'act_cinco_grupal') && activity.reflection && (
                               <button
                                 onClick={() => openReflection(activity)}
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
@@ -427,6 +471,22 @@ Esta experiencia me preparó para enfrentar desafíos reales de integración de 
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                                 </svg>
                                 <span>Dashboard</span>
+                              </a>
+                            )}
+
+                            {/* Visualizaciones - Para Actividad 5 grupal */}
+                            {activity.id === 'act_cinco_grupal' && (
+                              <a
+                                href="https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cinco_grup/resultados/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
+                              >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                </svg>
+                                <span>Visualizaciones</span>
                               </a>
                             )}
 
