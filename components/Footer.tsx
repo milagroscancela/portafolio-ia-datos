@@ -43,10 +43,10 @@ const Footer = () => {
   ];
 
   const courseUnits = [
-    { name: 'UT1 - Fundamentos', href: '#portfolio' },
-    { name: 'UT2 - Procesamiento', href: '#portfolio' },
-    { name: 'UT3 - Almacenamiento', href: '#portfolio' },
-    { name: 'UT4 - Visualización', href: '#portfolio' },
+    { name: 'UT1', href: '#portfolio' },
+    { name: 'UT2', href: '#portfolio' },
+    { name: 'UT3', href: '#portfolio' },
+    { name: 'UT4', href: '#portfolio' },
   ];
 
   return (
@@ -55,8 +55,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-white dark:text-white mb-4">Portafolio IA</h3>
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <h3 className="text-2xl font-bold text-fuchsia-400 mb-4">Portafolio de la Ingeniería de Datos</h3>
+            <p className="text-fuchsia-300 mb-6 leading-relaxed">
               Portafolio personal de Ingeniería de Datos. Explorando el mundo de los datos 
               y compartiendo conocimientos a través de proyectos prácticos.
             </p>
@@ -78,13 +78,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Navegación</h4>
+            <h4 className="text-lg font-bold mb-4 text-fuchsia-400">Navegación</h4>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="text-gray-400 hover:text-primary-400 transition-colors duration-200"
+                    className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -95,13 +95,13 @@ const Footer = () => {
 
           {/* Course Units */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Unidades del Curso</h4>
+            <h4 className="text-lg font-bold mb-4 text-fuchsia-400">Unidades del Curso</h4>
             <ul className="space-y-2">
               {courseUnits.map((unit) => (
                 <li key={unit.name}>
                   <a
                     href={unit.href}
-                    className="text-gray-400 hover:text-secondary-400 transition-colors duration-200"
+                    className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors duration-200"
                   >
                     {unit.name}
                   </a>
@@ -112,13 +112,13 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Contacto</h4>
+            <h4 className="text-lg font-bold mb-4 text-fuchsia-400">Contacto</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:milagros.cancela@correo.ucu.edu.uy" className="text-gray-400 hover:text-primary-400 transition-colors">
+                <a href="mailto:milagros.cancela@correo.ucu.edu.uy" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">
                   milagros.cancela@correo.ucu.edu.uy
                 </a>
               </div>
@@ -127,13 +127,13 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-gray-400">Montevideo, Uruguay</span>
+                <span className="text-fuchsia-300">Montevideo, Uruguay</span>
               </div>
               <div className="flex items-center space-x-3">
                 <svg className="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-gray-400">Lun - Vie, 9:00 - 18:00</span>
+                <span className="text-fuchsia-300">Lun - Vie, 9:00 - 18:00</span>
               </div>
             </div>
           </div>
@@ -142,17 +142,17 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+            <div className="text-fuchsia-300 text-sm mb-4 md:mb-0">
               © {currentYear} Portafolio IA. Todos los derechos reservados.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">
+              <a href="#" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors duration-200">
                 Política de Privacidad
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">
+              <a href="#" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors duration-200">
                 Términos de Uso
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">
+              <a href="#" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors duration-200">
                 Cookies
               </a>
             </div>
