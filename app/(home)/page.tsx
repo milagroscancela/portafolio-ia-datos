@@ -25,10 +25,9 @@ export default function HomePage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen gradient-bg flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-r from-pink-100 to-purple-100 flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-primary-200 border-t-primary-500 rounded-full animate-spin mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold gradient-text">Cargando Portafolio...</h2>
+          <h2 className="text-3xl font-bold text-purple-600">Cargando Portafolio...</h2>
         </div>
       </div>
     );
