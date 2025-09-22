@@ -139,9 +139,9 @@ const Course = () => {
                 </h3>
                 
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-700 dark:to-gray-600 rounded-xl p-8 shadow-md">
-                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Syllabus Oficial 2025</h4>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  <div className="bg-pink-100 rounded-xl p-8 shadow-md">
+                    <h4 className="text-xl font-bold text-gray-900 text-white mb-4">Syllabus Oficial 2025</h4>
+                    <p className="text-gray-600 text-gray-300 mb-6">
                       Descarga el programa completo del curso con todos los detalles, cronograma y evaluaciones.
                     </p>
                     <a
