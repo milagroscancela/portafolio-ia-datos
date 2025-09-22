@@ -415,12 +415,12 @@ El trabajo en equipo fue crucial para esta actividad, permitiendo discutir difer
               {/* Exercises */}
               <div className="space-y-6">
                 <h5 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  Ejercicios y Proyectos ({currentUnit.exercises.length})
+                  Ejercicios y Proyectos ({(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.length : groupActivities.length) : currentUnit.exercises.length})
                 </h5>
                 
-                {currentUnit.id === 'UT1' ? (
+                {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (
                   <div className="space-y-8">
-                    {/* Tab Navigation para Actividades UT1 */}
+                    {/* Tab Navigation para Actividades UT1 y UT2 */}
                     <div className="flex flex-wrap justify-center gap-4">
                       <button
                         onClick={() => setActiveTab('individual')}
@@ -687,13 +687,13 @@ El trabajo en equipo fue crucial para esta actividad, permitiendo discutir difer
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div className="bg-white rounded-lg p-4">
                     <div className="text-2xl font-bold text-primary-600">
-                      {currentUnit.exercises.length}
+                      {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.length : groupActivities.length) : currentUnit.exercises.length}
                     </div>
                     <div className="text-sm text-gray-600">Ejercicios</div>
                   </div>
                   <div className="bg-white rounded-lg p-4">
                     <div className="text-2xl font-bold text-secondary-600">
-                      {currentUnit.exercises.filter(e => e.status === 'Completado').length}
+                      {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.length : groupActivities.length) : currentUnit.exercises.filter(e => e.status === 'Completado').length}
                     </div>
                     <div className="text-sm text-gray-600">Completados</div>
                   </div>
