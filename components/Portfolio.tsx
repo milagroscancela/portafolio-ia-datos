@@ -673,7 +673,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                 <h5 className="text-xl font-bold text-gray-900 mb-4">Resumen de la Unidad</h5>
                 <div className="grid md:grid-cols-3 gap-4 text-center">
                   <div className="bg-white rounded-lg p-4">
-                    <div className="text-2xl font-bold text-primary-600">
+                    <div className="text-2xl font-bold text-black">
                       {(currentUnit.id === 'UT1' || currentUnit.id === 'UT2') ? (activeTab === 'individual' ? individualActivities.filter(activity => activity.unit === activeUnit).length : groupActivities.filter(activity => activity.unit === activeUnit).length) : currentUnit.exercises.length}
                     </div>
                     <div className="text-sm text-gray-600">Ejercicios</div>
