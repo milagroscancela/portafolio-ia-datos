@@ -62,6 +62,39 @@ Esta actividad me mostró la complejidad real de los proyectos de datos y la imp
 
 **Aplicación profesional:**
 Esta experiencia me preparó para trabajar con datasets reales y complejos, desarrollando la paciencia y metodología necesarias para el análisis de datos empresariales.`
+    },
+    {
+      id: 'act_cuatro_individual',
+      title: 'Actividad 4 - EDA Multi-fuentes Individual',
+      description: 'Análisis exploratorio de múltiples fuentes de datos con operaciones de join y limpieza avanzada',
+      date: '2024-09-15',
+      notebook: 'https://milagroscancela.github.io/ia-portfolio/portfolio/actividades/act_cuatro_individual/pract_cuatro/',
+      visualizations: [],
+      report: '',
+      reflection: `La Actividad 4 Individual representó un salto significativo en mi comprensión del análisis de datos complejos.
+
+**Desafíos técnicos superados:**
+- Integración de múltiples fuentes de datos heterogéneas
+- Manejo de inconsistencias entre datasets
+- Optimización de operaciones de join en datasets grandes
+- Limpieza de datos con patrones complejos
+
+**Habilidades desarrolladas:**
+- Dominio de operaciones SQL avanzadas (INNER, LEFT, RIGHT JOIN)
+- Técnicas de normalización y estandarización de datos
+- Estrategias de validación de integridad referencial
+- Creación de pipelines de limpieza reproducibles
+
+**Insights obtenidos:**
+- Identificación de patrones ocultos en datos combinados
+- Correlaciones entre variables de diferentes fuentes
+- Tendencias que solo emergen al unir datasets
+
+**Impacto en mi formación:**
+Esta actividad me enseñó que el verdadero valor de los datos está en su integración. Aprendí que la limpieza y preparación de datos es un arte que requiere paciencia, metodología y creatividad para resolver problemas únicos de cada proyecto.
+
+**Aplicación profesional:**
+Esta experiencia me preparó para enfrentar desafíos reales de integración de datos en entornos empresariales, donde la calidad y consistencia de los datos son fundamentales para el éxito de cualquier análisis.`
     }
   ];
 
@@ -356,8 +389,8 @@ Esta experiencia me preparó para trabajar con datasets reales y complejos, desa
 
                           {/* Actions */}
                           <div className="flex flex-wrap gap-2">
-                            {/* Reflexión - Para Netflix individual e Iris individual */}
-                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris') && activity.reflection && (
+                            {/* Reflexión - Para Netflix individual, Iris individual y Actividad 4 individual */}
+                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris' || activity.id === 'act_cuatro_individual') && activity.reflection && (
                               <button
                                 onClick={() => openReflection(activity)}
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
