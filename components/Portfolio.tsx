@@ -356,8 +356,8 @@ Esta experiencia me preparó para trabajar con datasets reales y complejos, desa
 
                           {/* Actions */}
                           <div className="flex flex-wrap gap-2">
-                            {/* Reflexión - Solo para Netflix individual */}
-                            {activity.id === 'act_tres_netflix' && activity.reflection && (
+                            {/* Reflexión - Para Netflix individual e Iris individual */}
+                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris') && activity.reflection && (
                               <button
                                 onClick={() => openReflection(activity)}
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
