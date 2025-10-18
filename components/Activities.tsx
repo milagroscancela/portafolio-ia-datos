@@ -377,6 +377,13 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                           <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                             <strong>📊 Visualización:</strong> Análisis de Completitud de Datos – resumen de completitud del dataset.
                           </div>
+                          <div className="mt-3">
+                            <img 
+                              src="/activities/visualizations/missing.png" 
+                              alt="Análisis de Completitud de Datos"
+                              className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-600"
+                            />
+                          </div>
                         </div>
 
                         <div className="bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-lg p-4">
@@ -394,6 +401,13 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                           <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                             <strong>📈 Visualización:</strong> Matriz de Correlaciones – muestra las relaciones lineales entre variables.
                           </div>
+                          <div className="mt-3">
+                            <img 
+                              src="/activities/visualizations/matriz_correlaciones.png" 
+                              alt="Matriz de Correlaciones"
+                              className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-600"
+                            />
+                          </div>
                         </div>
 
                         <div className="bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-lg p-4">
@@ -407,6 +421,24 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                               <li>• Virginica tiene los sépalos más largos (6.59 cm promedio).</li>
                               <li>• Setosa presenta menor variabilidad.</li>
                             </ul>
+                          </div>
+                          <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                              <h5 className="font-semibold text-gray-800 dark:text-white mb-2 text-sm">Histogramas con Curvas de Densidad</h5>
+                              <img 
+                                src="/activities/visualizations/histogramas_kde_por_especie.png" 
+                                alt="Histogramas con Curvas de Densidad"
+                                className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-600"
+                              />
+                            </div>
+                            <div>
+                              <h5 className="font-semibold text-gray-800 dark:text-white mb-2 text-sm">Comparación Multivariada</h5>
+                              <img 
+                                src="/activities/visualizations/pairplot_por_especie.png" 
+                                alt="Comparación Multivariada"
+                                className="w-full h-auto rounded-lg border border-gray-200 dark:border-gray-600"
+                              />
+                            </div>
                           </div>
                         </div>
 
