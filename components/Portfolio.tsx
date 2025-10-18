@@ -464,8 +464,8 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
 
                           {/* Actions */}
                           <div className="flex flex-wrap gap-2">
-                            {/* Reflexión - Para Netflix individual, Iris individual, Actividad 4 individual, Actividad 5 individual y Actividad 5 grupal */}
-                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_dos_iris' || activity.id === 'act_cuatro_individual' || activity.id === 'act_cinco_individual' || activity.id === 'act_cinco_grupal') && activity.reflection && (
+                            {/* Reflexión - Para Netflix individual, Actividad 4 individual, Actividad 5 individual y Actividad 5 grupal */}
+                            {(activity.id === 'act_tres_netflix' || activity.id === 'act_cuatro_individual' || activity.id === 'act_cinco_individual' || activity.id === 'act_cinco_grupal') && activity.reflection && (
                               <button
                                 onClick={() => openReflection(activity)}
                                 className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
