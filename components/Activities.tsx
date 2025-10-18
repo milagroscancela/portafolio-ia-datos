@@ -7,6 +7,7 @@ const Activities = () => {
   const [selectedActivity, setSelectedActivity] = useState<any>(null);
   const [showNotebook, setShowNotebook] = useState(false);
   const [showReport, setShowReport] = useState(false);
+  const [showVisualizations, setShowVisualizations] = useState(false);
 
   const individualActivities = [
     {
@@ -146,6 +147,15 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
     setSelectedActivity(null);
   };
 
+  const openVisualizations = (activity: any) => {
+    setSelectedActivity(activity);
+    setShowVisualizations(true);
+  };
+
+  const closeVisualizations = () => {
+    setShowVisualizations(false);
+    setSelectedActivity(null);
+  };
 
   const openReport = (activity: any) => {
     setSelectedActivity(activity);
@@ -229,6 +239,16 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                     <span>Ver Notebook</span>
                   </button>
 
+                  <button
+                    onClick={() => openVisualizations(activity)}
+                    className="btn-secondary flex items-center justify-center space-x-1 text-sm px-3 py-2"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    <span>Visualizaciones</span>
+                  </button>
 
                   {activity.report && (
                     <button
@@ -488,6 +508,109 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
         </div>
       )}
 
+      {/* Visualizations Modal */}
+      {showVisualizations && selectedActivity && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                  Visualizaciones - {selectedActivity.title}
+                </h3>
+                <button
+                  onClick={closeVisualizations}
+                  className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              
+              {selectedActivity.id === 'act_dos_iris' ? (
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold text-pink-600 dark:text-pink-400 mb-4">📊 Visualizaciones del Análisis Iris</h4>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm">
+                      A continuación se presentan todas las visualizaciones generadas durante el análisis exploratorio del dataset Iris.
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Missing Data Visualization */}
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md">
+                      <h5 className="font-semibold text-gray-800 dark:text-white mb-3">📈 Análisis de Datos Faltantes</h5>
+                      <img 
+                        src="/activities/visualizations/missing.png" 
+                        alt="Análisis de datos faltantes"
+                        className="w-full h-auto rounded-lg"
+                      />
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                        Verificación de completitud del dataset - sin valores faltantes detectados.
+                      </p>
+                    </div>
+
+                    {/* Correlation Matrix */}
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md">
+                      <h5 className="font-semibold text-gray-800 dark:text-white mb-3">🔗 Matriz de Correlaciones</h5>
+                      <img 
+                        src="/activities/visualizations/matriz_correlaciones.png" 
+                        alt="Matriz de correlaciones"
+                        className="w-full h-auto rounded-lg"
+                      />
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                        Relaciones lineales entre variables - alta correlación en pétalos (0.86).
+                      </p>
+                    </div>
+
+                    {/* Histograms by Species */}
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md">
+                      <h5 className="font-semibold text-gray-800 dark:text-white mb-3">📊 Distribuciones por Especie</h5>
+                      <img 
+                        src="/activities/visualizations/histogramas_kde_por_especie.png" 
+                        alt="Histogramas y KDE por especie"
+                        className="w-full h-auto rounded-lg"
+                      />
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                        Distribuciones de variables con curvas de densidad por especie.
+                      </p>
+                    </div>
+
+                    {/* Pairplot by Species */}
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 shadow-md">
+                      <h5 className="font-semibold text-gray-800 dark:text-white mb-3">🎯 Comparación Multivariada</h5>
+                      <img 
+                        src="/activities/visualizations/pairplot_por_especie.png" 
+                        alt="Pairplot por especie"
+                        className="w-full h-auto rounded-lg"
+                      />
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+                        Comparación entre todas las variables mostrando separación clara de especies.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-lg p-4">
+                    <h5 className="font-semibold text-pink-600 dark:text-pink-400 mb-2">💡 Interpretación de Resultados</h5>
+                    <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                      <li>• <strong>Datos completos:</strong> No se encontraron valores faltantes en el dataset</li>
+                      <li>• <strong>Correlación fuerte:</strong> Pétalos muestran relación lineal casi perfecta (0.86)</li>
+                      <li>• <strong>Separación clara:</strong> Las especies se distinguen bien en el espacio multivariado</li>
+                      <li>• <strong>Variabilidad:</strong> Virginica presenta mayor dispersión en pétalos</li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div className="bg-gray-100 dark:bg-gray-700 rounded-lg p-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    <strong>Visualizaciones:</strong> No hay visualizaciones disponibles para esta actividad.
+                  </p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Report Modal */}
       {showReport && selectedActivity && (
