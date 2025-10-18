@@ -375,7 +375,7 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                             <li>• El dataset resultó estar <strong>completo, sin nulos ni inconsistencias</strong>.</li>
                           </ul>
                           <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                            <strong>📊 Visualización:</strong> missing.png – resumen de completitud del dataset.
+                            <strong>📊 Visualización:</strong> Análisis de Completitud de Datos – resumen de completitud del dataset.
                           </div>
                         </div>
 
@@ -392,14 +392,14 @@ Logramos crear un análisis coherente que integraba múltiples fuentes de datos,
                             </ul>
                           </div>
                           <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                            <strong>📈 Visualización:</strong> matriz_correlaciones.png – muestra las relaciones lineales entre variables.
+                            <strong>📈 Visualización:</strong> Matriz de Correlaciones – muestra las relaciones lineales entre variables.
                           </div>
                         </div>
 
                         <div className="bg-gradient-to-r from-pink-50 to-purple-50 dark:from-pink-900/20 dark:to-purple-900/20 rounded-lg p-4">
                           <h3 className="text-lg font-semibold text-pink-600 dark:text-pink-400 mb-2">3️⃣ Distribución por Especie</h3>
                           <p className="text-gray-700 dark:text-gray-300 text-sm mb-2">
-                            Se generaron visualizaciones por especie: histogramas_kde_por_especie.png y pairplot_por_especie.png.
+                            Se generaron visualizaciones por especie: Histogramas con Curvas de Densidad y Comparación Multivariada.
                           </p>
                           <div className="text-sm text-gray-700 dark:text-gray-300">
                             <strong>📊 Conclusiones:</strong>

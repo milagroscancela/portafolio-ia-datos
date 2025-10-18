@@ -807,7 +807,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                             <li>• El dataset resultó estar <strong>completo, sin nulos ni inconsistencias</strong>.</li>
                           </ul>
                           <div className="mt-2 text-sm text-gray-600">
-                            <strong>📊 Visualización:</strong> missing.png – resumen de completitud del dataset.
+                            <strong>📊 Visualización:</strong> Análisis de Completitud de Datos – resumen de completitud del dataset.
                           </div>
                         </div>
 
@@ -824,14 +824,14 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                             </ul>
                           </div>
                           <div className="mt-2 text-sm text-gray-600">
-                            <strong>📈 Visualización:</strong> matriz_correlaciones.png – muestra las relaciones lineales entre variables.
+                            <strong>📈 Visualización:</strong> Matriz de Correlaciones – muestra las relaciones lineales entre variables.
                           </div>
                         </div>
 
                         <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
                           <h3 className="text-lg font-semibold text-pink-600 mb-2">3️⃣ Distribución por Especie</h3>
                           <p className="text-gray-700 text-sm mb-2">
-                            Se generaron visualizaciones por especie: histogramas_kde_por_especie.png y pairplot_por_especie.png.
+                            Se generaron visualizaciones por especie: Histogramas con Curvas de Densidad y Comparación Multivariada.
                           </p>
                           <div className="text-sm text-gray-700">
                             <strong>📊 Conclusiones:</strong>
