@@ -140,7 +140,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
   const groupActivities = [
     {
       id: 'act_tres_grupal',
-      title: 'Actividad 3 - EDA Netflix Grupal',
+      title: '🎬 Analizando el Universo de Netflix: Tendencias, Ratings y Producción Global',
       description: 'Análisis exploratorio del dataset de Netflix con trabajo colaborativo',
       date: '2024-09-10',
       unit: 'UT1',
