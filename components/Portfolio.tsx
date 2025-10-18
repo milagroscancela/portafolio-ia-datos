@@ -14,7 +14,7 @@ const Portfolio = () => {
   const individualActivities = [
     {
       id: 'act_dos_iris',
-      title: 'Actividad 2 - Análisis del Dataset Iris',
+      title: '🌺 Explorando los Secretos del Iris: Un Viaje de Datos y Descubrimientos',
       description: 'Análisis completo del dataset clásico de Iris con visualizaciones avanzadas',
       date: '2024-09-07',
       unit: 'UT1',
@@ -727,7 +727,7 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">
-                  Jupyter Notebook - {selectedActivity.title}
+                  {selectedActivity.title}
                 </h3>
                 <button
                   onClick={closeNotebook}
@@ -739,75 +739,182 @@ Esta experiencia me preparó para ser autónoma en la resolución de problemas d
                 </button>
               </div>
               
-              <div className="bg-gray-100 rounded-lg p-4 mb-4">
-                <p className="text-sm text-gray-600 text-gray-300 mb-2">
-                  <strong>Notebook:</strong> {selectedActivity.notebook}
-                </p>
-                <p className="text-sm text-gray-600 text-gray-300">
-                  <strong>Descripción:</strong> {selectedActivity.description}
-                </p>
-              </div>
+              {selectedActivity.id === 'act_dos_iris' ? (
+                <div className="prose prose-lg max-w-none">
+                  <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-xl p-6 mb-6">
+                    <h1 className="text-3xl font-bold text-pink-600 mb-4">🌺 Explorando los Secretos del Iris: Un Viaje de Datos y Descubrimientos</h1>
+                    
+                    <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-4">
+                      <span className="flex items-center"><span className="mr-2">📅</span><strong>Duración estimada del proyecto:</strong> 1 hora</span>
+                      <span className="flex items-center"><span className="mr-2">📂</span><strong>Notebook asociado:</strong> dataset_iris.ipynb</span>
+                      <span className="flex items-center"><span className="mr-2">📍</span><strong>Ubicación en repo:</strong> /results/reportes/dataset_iris.ipynb</span>
+                    </div>
 
-              <div className="bg-gray-900 rounded-lg p-4 text-green-400 font-mono text-sm overflow-x-auto">
-                <div className="space-y-4">
-                  {/* Header del notebook */}
-                  <div className="flex items-center justify-between border-b border-gray-700 pb-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    </div>
-                    <span className="text-gray-400 text-xs">Jupyter Notebook</span>
-                  </div>
-                  
-                  {/* Contenido simulado del notebook */}
-                  <div className="space-y-3">
-                    <div className="bg-gray-800 rounded p-3">
-                      <div className="text-blue-400 mb-2">In [1]:</div>
-                      <div className="">
-                        <span className="text-purple-400">import</span> pandas <span className="text-purple-400">as</span> pd<br/>
-                        <span className="text-purple-400">import</span> matplotlib.pyplot <span className="text-purple-400">as</span> plt<br/>
-                        <span className="text-purple-400">import</span> seaborn <span className="text-purple-400">as</span> sns
-                      </div>
-                    </div>
-                    
-                    <div className="bg-gray-800 rounded p-3">
-                      <div className="text-blue-400 mb-2">Out [1]:</div>
-                      <div className="text-gray-300"># Celdas ejecutadas correctamente</div>
-                    </div>
-                    
-                    <div className="bg-gray-800 rounded p-3">
-                      <div className="text-blue-400 mb-2">In [2]:</div>
-                      <div className="">
-                        <span className="text-gray-400"># Cargar datos</span><br/>
-                        df = pd.read_csv(<span className="text-green-400">'data.csv'</span>)
-                      </div>
-                    </div>
-                    
-                    <div className="bg-gray-800 rounded p-3">
-                      <div className="text-blue-400 mb-2">Out [2]:</div>
-                      <div className="text-gray-300">
-                        <span className="text-green-400">Shape:</span> (150, 5)<br/>
-                        <span className="text-green-400">Columns:</span> ['sepal_length', 'sepal_width', 'petal_length', 'petal_width', 'species']
-                      </div>
+                    <div className="bg-pink-100 rounded-lg p-4">
+                      <p className="text-sm text-gray-700 mb-2">
+                        <strong>Descargar notebook:</strong>
+                      </p>
+                      <a href="/files/notebooks/dataset_iris.ipynb" download className="inline-flex items-center px-3 py-1 bg-pink-500 text-white rounded-md hover:bg-pink-600 transition-colors text-sm">
+                        <span className="mr-1">📥</span> Descargar dataset_iris.ipynb
+                      </a>
                     </div>
                   </div>
-                  
-                  {/* Botón de descarga */}
-                  <div className="text-center pt-4 border-t border-gray-700">
-                    <a
-                      href={`/files/notebooks/${selectedActivity.notebook}`}
-                      download
-                      className="btn-primary inline-flex items-center space-x-2"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                      <span>Descargar Notebook Completo</span>
-                    </a>
+
+                  <div className="space-y-6">
+                    <section>
+                      <h2 className="text-2xl font-bold text-purple-600 mb-4 flex items-center">
+                        <span className="mr-2">📘</span> Introducción
+                      </h2>
+                      <p className="text-gray-700 leading-relaxed">
+                        Este análisis forma parte del <strong>portafolio de Ingeniería de Datos</strong> y explora el famoso <strong>dataset Iris</strong>, utilizando herramientas de análisis estadístico, validación de datos y visualización.
+                        El objetivo fue <strong>descubrir relaciones entre las medidas de sépalos y pétalos</strong> y desarrollar un flujo de trabajo reproducible, documentado y visualmente atractivo.
+                      </p>
+                    </section>
+
+                    <section>
+                      <h2 className="text-2xl font-bold text-purple-600 mb-4 flex items-center">
+                        <span className="mr-2">🧭</span> Proceso de Análisis
+                      </h2>
+                      
+                      <div className="space-y-4">
+                        <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
+                          <h3 className="text-lg font-semibold text-pink-600 mb-2">1️⃣ Validación y Diccionario de Datos</h3>
+                          <ul className="text-gray-700 space-y-1 text-sm">
+                            <li>• Se generó el archivo <strong>data_dictionary.csv</strong> con la descripción de cada variable.</li>
+                            <li>• Se verificaron valores faltantes en <strong>missing.csv</strong>, <strong>missing_prop.csv</strong> y <strong>nulos.csv</strong>.</li>
+                            <li>• El dataset resultó estar <strong>completo, sin nulos ni inconsistencias</strong>.</li>
+                          </ul>
+                          <div className="mt-2 text-sm text-gray-600">
+                            <strong>📊 Visualización:</strong> missing.png – resumen de completitud del dataset.
+                          </div>
+                        </div>
+
+                        <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
+                          <h3 className="text-lg font-semibold text-pink-600 mb-2">2️⃣ Estadísticas Descriptivas y Correlaciones</h3>
+                          <p className="text-gray-700 text-sm mb-2">
+                            Se calcularon medidas básicas (describe.csv), covarianzas (cov.csv) y curtosis/asimetría (skew_kurt.csv).
+                          </p>
+                          <div className="text-sm text-gray-700">
+                            <strong>🔍 Hallazgos principales:</strong>
+                            <ul className="mt-1 space-y-1">
+                              <li>• Alta correlación (0.86) entre largo y ancho de pétalos.</li>
+                              <li>• Baja correlación (-0.12) entre largo y ancho de sépalos.</li>
+                            </ul>
+                          </div>
+                          <div className="mt-2 text-sm text-gray-600">
+                            <strong>📈 Visualización:</strong> matriz_correlaciones.png – muestra las relaciones lineales entre variables.
+                          </div>
+                        </div>
+
+                        <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
+                          <h3 className="text-lg font-semibold text-pink-600 mb-2">3️⃣ Distribución por Especie</h3>
+                          <p className="text-gray-700 text-sm mb-2">
+                            Se generaron visualizaciones por especie: histogramas_kde_por_especie.png y pairplot_por_especie.png.
+                          </p>
+                          <div className="text-sm text-gray-700">
+                            <strong>📊 Conclusiones:</strong>
+                            <ul className="mt-1 space-y-1">
+                              <li>• Virginica tiene los sépalos más largos (6.59 cm promedio).</li>
+                              <li>• Setosa presenta menor variabilidad.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-4">
+                          <h3 className="text-lg font-semibold text-pink-600 mb-2">4️⃣ Respuestas de Negocio</h3>
+                          <div className="text-sm text-gray-700 space-y-3">
+                            <div>
+                              <strong>1. Relación entre variables:</strong>
+                              <ul className="mt-1 space-y-1 ml-4">
+                                <li>• Existe una <strong>correlación muy fuerte (0.86)</strong> entre el largo y ancho de los <strong>pétalos</strong>.</li>
+                                <li>• Los <strong>sépalos</strong> presentan una <strong>correlación débil (-0.12)</strong>.</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <strong>2. Comparación entre especies:</strong>
+                              <ul className="mt-1 space-y-1 ml-4">
+                                <li>• <strong>Virginica</strong> tiene los sépalos más largos (6.59 cm promedio).</li>
+                                <li>• <strong>Versicolor</strong> ocupa posición intermedia (5.94 cm).</li>
+                                <li>• <strong>Setosa</strong> posee los más cortos (5.01 cm).</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <strong>3. Variabilidad intraespecífica:</strong>
+                              <ul className="mt-1 space-y-1 ml-4">
+                                <li>• La longitud de pétalos en <strong>Virginica</strong> muestra mayor dispersión (0.55 cm).</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section>
+                      <h2 className="text-2xl font-bold text-purple-600 mb-4 flex items-center">
+                        <span className="mr-2">🌟</span> Hallazgos Principales
+                      </h2>
+                      <div className="overflow-x-auto">
+                        <table className="w-full border-collapse border border-pink-200">
+                          <thead className="bg-pink-100">
+                            <tr>
+                              <th className="border border-pink-200 px-4 py-2 text-left text-pink-700">Insight</th>
+                              <th className="border border-pink-200 px-4 py-2 text-left text-pink-700">Evidencia</th>
+                            </tr>
+                          </thead>
+                          <tbody className="text-sm">
+                            <tr>
+                              <td className="border border-pink-200 px-4 py-2">Correlación alta pétalos</td>
+                              <td className="border border-pink-200 px-4 py-2">0.86</td>
+                            </tr>
+                            <tr>
+                              <td className="border border-pink-200 px-4 py-2">Correlación baja sépalos</td>
+                              <td className="border border-pink-200 px-4 py-2">-0.12</td>
+                            </tr>
+                            <tr>
+                              <td className="border border-pink-200 px-4 py-2">Virginica tiene sépalos más largos</td>
+                              <td className="border border-pink-200 px-4 py-2">Promedio: 6.59 cm</td>
+                            </tr>
+                            <tr>
+                              <td className="border border-pink-200 px-4 py-2">Mayor variabilidad</td>
+                              <td className="border border-pink-200 px-4 py-2">Pétalos en Virginica (0.55 cm)</td>
+                            </tr>
+                            <tr>
+                              <td className="border border-pink-200 px-4 py-2">Dataset balanceado</td>
+                              <td className="border border-pink-200 px-4 py-2">33.3% cada especie</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+
+                    <section>
+                      <h2 className="text-2xl font-bold text-purple-600 mb-4 flex items-center">
+                        <span className="mr-2">💭</span> Reflexión personal
+                      </h2>
+                      <div className="bg-gradient-to-r from-pink-50 to-purple-50 rounded-lg p-6">
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                          Este trabajo me permitió reafirmar la importancia de ir más allá del código y mirar los datos con una perspectiva crítica y analítica. Aunque el dataset Iris es un clásico en la ciencia de datos, volver a explorarlo desde cero me ayudó a fortalecer mi comprensión del <strong>proceso de análisis exploratorio</strong>: desde la limpieza y validación de datos hasta la interpretación visual y las conclusiones basadas en evidencia.
+                        </p>
+                        <p className="text-gray-700 leading-relaxed mb-4">
+                          Lo que más valoro de este ejercicio fue entender cómo <strong>cada decisión técnica puede tener un sentido práctico o de negocio</strong>. Por ejemplo, descubrir que los pétalos son las variables más relevantes no solo es una conclusión estadística, sino también un recordatorio de que en los proyectos reales debemos saber <strong>qué información aporta más valor</strong> y <strong>cómo comunicarla de forma clara</strong>.
+                        </p>
+                        <p className="text-gray-700 leading-relaxed">
+                          En definitiva, este trabajo me ayudó a mejorar mi forma de <strong>documentar procesos, interpretar datos y presentar resultados</strong>, tres competencias clave en ingeniería de datos. Aunque fue una tarea breve, me dejó la sensación de que <strong>la calidad no depende del tamaño del dataset, sino del cuidado con el que se analiza y comunica</strong>.
+                        </p>
+                      </div>
+                    </section>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="bg-gray-100 rounded-lg p-4 mb-4">
+                  <p className="text-sm text-gray-600 mb-2">
+                    <strong>Notebook:</strong> {selectedActivity.notebook}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    <strong>Descripción:</strong> {selectedActivity.description}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
